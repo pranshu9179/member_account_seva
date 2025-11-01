@@ -99,7 +99,7 @@
     <div class="container h-100 d-flex align-items-center justify-content-between d-flex rtl-flex-d-row-r">
       <!-- Logo Wrapper -->
       <div class="logo-wrapper d-flex align-items-center justify-content-left">
-        <a href="index-2.html">
+        <a href="home.html">
           <img src="Logo.png" width="35%">
         </a>
         <style>
@@ -955,7 +955,7 @@
                 </a>
               </div>
               <div class="product-description text-center">
-                <p>Place <br class="mobile-br"> order</p>
+                <p>Place  order</p>
               </div>
             </div>
           </div>
@@ -1019,8 +1019,6 @@
       /* --- Base Wrapper --- */
       .how-it-works {
         padding: 2.5rem 1rem;
-        background: -o-linear-gradient(left, #c02b30, #ea4c62);
-        background: linear-gradient(to right, #c02b30, #ea4c62);
         border-radius: 18px;
         max-width: 1200px;
         margin: 0 auto 2rem;
@@ -1031,7 +1029,7 @@
         font-size: 1.8rem;
         font-weight: 800;
         letter-spacing: -0.02em;
-        color: #cfd7e9;
+        color: #000000;
         position: relative;
       }
 
@@ -1049,6 +1047,7 @@
       .steps-row {
         gap: 45px;
         align-items: stretch;
+        width: 1250px;
       }
 
       /* --- Step Number --- */
@@ -1075,8 +1074,6 @@
         border: none;
         border-radius: 16px;
         position: relative;
-
-        background: linear-gradient(180deg, #f1eaea 0%, #f37070 100%);
         box-shadow: 0 6px 20px rgba(255, 100, 100, 0.1);
         overflow: hidden;
         transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -1085,7 +1082,8 @@
       /* --- Card Hover --- */
       .featured-product-card:hover {
         transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 15px 40px rgba(255, 65, 108, 0.25);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(180deg, #f1eaea 0%, #f37070 100%);
       }
 
       .featured-product-card:hover .product-thumbnail img {
@@ -1134,7 +1132,7 @@
           left: 8%;
           right: 8%;
           height: 4px;
-          background: linear-gradient(90deg, rgba(198, 237, 6, 0.689), rgba(243, 154, 0, 0.861));
+          /* background: linear-gradient(90deg, rgba(198, 237, 6, 0.689), rgba(243, 154, 0, 0.861)); */
           border-radius: 6px;
           z-index: 0;
         }
@@ -1145,7 +1143,7 @@
         }
       }
 
-      /* --- Responsive Tweaks --- */
+      /* --- Mobile 2x2 fix: replace your existing @media (max-width: 575.98px) block with this --- */
       @media (max-width: 575.98px) {
         .section-title {
           font-size: 1.4rem;
@@ -1162,7 +1160,54 @@
         .mobile-br {
           display: block;
         }
+
+        /* Force a proper 2 columns x 2 rows grid */
+        .steps-row {
+          display: flex !important;
+          flex-wrap: wrap !important;
+          justify-content: space-between;
+          width: 348px;
+          /* spread columns across the row */
+          gap: 16px 12px;
+          /* row-gap, column-gap */
+          padding: 0 8px;
+          /* small horizontal inset so columns don't touch screen edges */
+          box-sizing: border-box;
+        }
+
+        /* Each step column becomes ~50% width (accounting for gap) */
+        .step-col {
+          flex: 0 0 calc(50% - 12px);
+          max-width: calc(50% - 12px);
+          box-sizing: border-box;
+          padding-left: 0;
+          padding-right: 0;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          display: block;
+          /* ensure child card can fill the column */
+          align-items: stretch;
+          /* if ever used as a flex child, stretch vertically */
+        }
+
+        /* Make the card fill the column */
+        .step-col .featured-product-card {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        /* Slight visual tweak so cards are vertically aligned and consistent */
+        .featured-product-card .card-body {
+          padding: 1rem;
+        }
+
+        /* Keep thumbnail sizes reasonable on very small screens */
+        .product-thumbnail img {
+          width: clamp(60px, 18vw, 90px);
+          height: auto;
+        }
       }
+
 
       /* --- Entrance Animation --- */
       .step-col {
@@ -1176,7 +1221,6 @@
         transform: translateY(0);
       }
     </style>
-
   </div>
   </div>
 
@@ -1192,7 +1236,7 @@
   <!--<h4 class="text-center mb-3">Frequently Asked Questions </h4>-->
 
 
-
+  <!-- Frequently Asked Questions -->
   <div class=" container m-auto">
 
     <div class="section-heading d-flex align-items-center justify-content-between dir-rtl">
@@ -1267,11 +1311,7 @@
           </div>
           <div class="collapse" id="collapse38" aria-labelledby="headingOne" data-bs-parent="#accordion1">
             <p>Yes, you can. </p>
-
-
           </div>
-
-
         </div>
       </div>
     </div>
@@ -1282,140 +1322,26 @@
 
 
 
+  <!-- Customer Speak -->
+  <div class="">
+    <h4 class="text-center mb-3 mt-4 fw-bold" style="font-size: 1.8rem;">Customer Speak</h4>
 
+    <!-- MOBILE ONLY Customer Speak section with auto-slide -->
+    <div class="mobile-why-choose-us" style="display:none;">
+      <div class="mobile-why-slider">
 
-<!-- ✅ Customer Speak Section -->
- <div class="">
-  <h4 class="text-center mb-3 fw-bold" style="font-size: 1.8rem;">Customer Speak</h4>
-  <div class="row">
-
-    <style>
-      /* 🌈 Testimonial Slider Section */
-      .customer-slider .review-card {
-        height: auto;
-        display: flex;
-        align-items: center !important;
-        justify-content: start !important;
-        background: linear-gradient(145deg, #ffffff, #f7f7f7);
-        border-radius: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.4s ease;
-        position: relative;
-        overflow: hidden;
-        padding: 2rem 1.5rem;
-        animation: fadeInUp 0.8s ease both;
-        text-align: center;
-      }
-
-      /* Hover effect */
-      .customer-slider .review-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-        background: linear-gradient(145deg, #ffffff, #e6e9f0);
-      }
-
-      /* Image */
-      .customer-slider .review-card img {
-        width: 70px !important;
-        height: 70px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-        border: 3px solid #FFD700;
-        transition: transform 0.4s ease;
-      }
-
-      .customer-slider .review-card:hover img {
-        transform: scale(1.1) rotate(3deg);
-      }
-
-      /* Name */
-      .customer-slider .review-card h5 {
-        font-weight: 600;
-        color: #0b1220;
-        margin-bottom: 0.5rem;
-      }
-
-      /* Stars */
-      .customer-slider .review-card font i {
-        font-size: 1.1rem;
-        color: #FFD700;
-        transition: transform 0.3s ease;
-      }
-
-      .customer-slider .review-card:hover font i {
-        transform: scale(1.1);
-        color: #ffb400;
-      }
-
-      /* Text */
-      .customer-slider .review-card p {
-        color: #555;
-        font-size: 0.95rem;
-        line-height: 1.5rem;
-        max-width: 90%;
-        margin: auto;
-      }
-
-      /* Number overlay */
-      .customer-slider .review-card::after {
-        content: attr(data-num);
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 3rem;
-        font-weight: 700;
-        color: rgba(255, 215, 0, 0.15);
-        z-index: 0;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 767px) {
-        .customer-slider .review-card {
-          height: auto;
-          padding: 1.5rem 1rem;
-        }
-
-        .customer-slider .review-card img {
-          width: 55px !important;
-          height: 55px;
-        }
-
-        .customer-slider .review-card h5 {
-          font-size: 1rem;
-        }
-
-        .customer-slider .review-card p {
-          font-size: 0.9rem;
-        }
-      }
-
-      /* Animation */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
-
-    <div class="pb-3 mt-4 mb-5">
-      <div class="container">
-        <div class="customer-slider owl-carousel">
-
-          <!-- Review 1 -->
+        <!-- Customer Speak Mobile Card 1 -->
+        <div class="mobile-why-slide card1">
           <div class="review-slide text-center">
             <div class="col-lg-12 m-auto review-card" data-num="1">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU" alt="">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU"
+                alt="">
               <h5>Daneesh Shrivastava</h5>
               <div>
-                <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i></font>
+                <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </font>
               </div>
               <a href="https://g.co/kgs/fKYMHk" target="_blank">
                 <p>I have experienced multiple services from All Tax and it has been a great experience every time.
@@ -1423,16 +1349,20 @@
               </a>
             </div>
           </div>
+        </div>
 
-          <!-- Review 2 -->
+        <!-- Customer Speak Mobile Card 2 -->
+        <div class="mobile-why-slide card2">
           <div class="review-slide text-center">
             <div class="col-lg-12 m-auto review-card" data-num="2">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU" alt="">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU"
+                alt="">
               <h5>Bhagyashree Upadhyay</h5>
               <div>
-                <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i></font>
+                <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </font>
               </div>
               <a href="https://g.co/kgs/fKYMHk" target="_blank">
                 <p>We have used multiple services from All Tax and the overall experience was great.
@@ -1440,16 +1370,20 @@
               </a>
             </div>
           </div>
+        </div>
 
-          <!-- Review 3 -->
+        <!-- Customer Speak Mobile Card 3 -->
+        <div class="mobile-why-slide card3">
           <div class="review-slide text-center">
             <div class="col-lg-12 m-auto review-card" data-num="3">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU" alt="">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU"
+                alt="">
               <h5>Soumyashree Upadhyay</h5>
               <div>
-                <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i></font>
+                <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </font>
               </div>
               <a href="https://g.co/kgs/fKYMHk" target="_blank">
                 <p>All Tax is a one-stop solution for home renovation. Our experience was wonderful.
@@ -1457,60 +1391,590 @@
               </a>
             </div>
           </div>
+        </div>
 
-          <!-- Review 4 -->
+        <!-- Customer Speak Mobile Card 4 -->
+        <div class="mobile-why-slide card4">
           <div class="review-slide text-center">
             <div class="col-lg-12 m-auto review-card" data-num="4">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU" alt="">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU"
+                alt="">
               <h5>Shikha Yadav</h5>
               <div>
-                <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i></font>
+                <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </font>
               </div>
               <a href="https://g.co/kgs/fKYMHk" target="_blank">
-                <p>I am really impressed by the work of All Tax. The team was professional and completed the work before time!</p>
+                <p>I am really impressed by the work of All Tax. The team was professional and completed the work
+                  before time!</p>
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
-    <!-- 🧩 Owl Carousel Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!--  Desktop Customer Speak Card -->
+    <div class="row">
+      <style>
+        /* ✅ Common Why Choose Us Box */
+        .why-box {
+          padding: 30px 20px;
+          text-align: center;
+          background: #ffffff;
+          border-radius: 20px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          transition: all 0.4s ease;
+          position: relative;
+          overflow: hidden;
+          animation: fadeInUp 0.8s ease forwards;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          /* ensures content spacing inside */
+          height: 100%;
+        }
 
-    <script>
-      $(document).ready(function () {
-        $(".customer-slider.owl-carousel").owlCarousel({
-          items: 2,
-          loop: true,
-          margin: 20,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          autoplayHoverPause: true,
-          dots: true,
-          responsive: {
-            0: {
-              items: 1
-            },
-            768: {
-              items: 2
-            },
-            992: {
-              items: 2
-            }
+        /* ✅ Equal Height for Desktop View */
+        .why-slider .col-md-3,
+        .why-slider .col-lg-3,
+        .why-slider .col-sm-6 {
+          display: flex;
+        }
+
+        .why-box:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .why-box img {
+          margin: auto;
+          width: 85px !important;
+          transition: transform 0.4s ease;
+        }
+
+        .why-box:hover img {
+          transform: scale(1.1);
+        }
+
+        .why-box h4 {
+          margin-top: 25px;
+          font-size: 1.2rem;
+          color: #222;
+          font-weight: 600;
+        }
+
+        .why-box p {
+          font-size: 0.95rem;
+          color: #555;
+          margin-top: 10px;
+          padding: 0 15px;
+          flex-grow: 1;
+          /* helps text stretch evenly */
+        }
+
+        .why-box .arrow-icon {
+          position: absolute;
+          bottom: 15px;
+          right: 18px;
+          width: 20px !important;
+          opacity: 0.5;
+          transition: opacity 0.3s ease;
+        }
+
+        .why-box:hover .arrow-icon {
+          opacity: 1;
+        }
+
+        /* ✅ Animation */
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(30px);
           }
-        });
-      });
-    </script>
+
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* ✅ Owl Carousel Navigation Arrows */
+        .why-prev-arrow,
+        .why-next-arrow {
+          font-size: 2rem;
+          color: #222;
+          background: #ffffff;
+          border-radius: 50%;
+          padding: 6px 12px;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .why-prev-arrow:hover,
+        .why-next-arrow:hover {
+          background: #0056d2;
+          color: #fff;
+          transform: scale(1.1);
+        }
+
+        .owl-nav {
+          position: absolute;
+          top: 45%;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          transform: translateY(-50%);
+          padding: 0 10px;
+          z-index: 5;
+        }
+
+        /* ✅ Review Card */
+        .review-card {
+          background: #ffffff;
+          border-radius: 18px;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+          padding: 20px 15px;
+          transition: all 0.4s ease;
+        }
+
+        .review-card img {
+          width: 80px;
+          height: 90px;
+          border-radius: 35%;
+          border: 3px solid #ffb400;
+          /* margin-bottom: 10px; */
+          box-sizing: border-box;
+        }
+
+        .review-card h5 {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #222;
+          margin-bottom: 8px;
+        }
+
+        .review-card font i {
+          color: #ffb400;
+          font-size: 1rem;
+          margin: 0 2px;
+        }
+
+        .review-card p {
+          font-size: 0.9rem;
+          color: #555;
+          margin-top: 10px;
+          line-height: 1.4;
+        }
+
+        /* ✅ Mobile View Styling (Same color, auto height) */
+
+        @media (min-width:576px) {
+          .why-slider .why-box {
+            flex: 1 1 0%;
+            min-width: 0;
+            max-width: none;
+            margin: 0;
+            border-radius: 22px;
+            box-shadow: 0 4px 18px 0 #ed9696;
+            padding: 36px 18px 36px 18px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100px;
+            justify-content: flex-start;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 576px) {
+
+          .why-prev-arrow,
+          .why-next-arrow {
+            font-size: 1.4rem;
+            padding: 4px 8px;
+          }
+
+          .why-box {
+            padding: 25px 15px;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-height: auto;
+            /* allow natural sizing on mobile */
+          }
+
+          .why-slider .owl-item {
+            display: flex;
+            justify-content: center;
+          }
+
+          /* ✅ Mobile "Why Choose Us" Slider */
+          .mobile-why-choose-us {
+            display: block !important;
+          }
+
+          .mobile-why-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 16px;
+            padding: 10px;
+          }
+
+          .mobile-why-slide {
+            flex: 0 0 85%;
+            scroll-snap-align: center;
+            border-radius: 18px;
+            background: #ffffff;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+          }
+
+          .mobile-why-slide:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          }
+
+          .review-card {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: none;
+            color: #222;
+          }
+
+          .review-card img {
+            border: 3px solid #ffb400;
+          }
+
+          .review-card h5 {
+            color: #111;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+          }
+
+          .review-card p {
+            color: #444;
+            font-size: 0.95rem;
+          }
+
+          .review-card font i {
+            color: #ffb400;
+          }
+        }
+      </style>
+      <div class="pb-3 mt-4 mb-5">
+        <div class="container position-relative">
+
+          <div class="why-slider owl-carousel">
+
+            <!-- Customer Speak Desktop Card 1 -->
+            <div class="card collection-card why-box">
+              <div class="review-slide text-center">
+                <div class="col-lg-12 m-auto review-card" data-num="1">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU"
+                    alt="">
+                  <h5>Daneesh Shrivastava</h5>
+                  <div>
+                    <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </font>
+                  </div>
+                  <a href="https://g.co/kgs/fKYMHk" target="_blank">
+                    <p>I have experienced multiple services from All Tax and it has been a great experience every time.
+                      The team is very professional and delivers with full satisfaction.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Customer Speak Desktop Card 2 -->
+            <div class="card collection-card why-box">
+              <div class="review-slide text-center">
+                <div class="col-lg-12 m-auto review-card" data-num="2">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU"
+                    alt="">
+                  <h5>Bhagyashree Upadhyay</h5>
+                  <div>
+                    <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </font>
+                  </div>
+                  <a href="https://g.co/kgs/fKYMHk" target="_blank">
+                    <p>We have used multiple services from All Tax and the overall experience was great.
+                      It’s a one-stop solution for everything you need at home.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Customer Speak Desktop Card 3 -->
+            <div class="card collection-card why-box">
+              <div class="review-slide text-center">
+                <div class="col-lg-12 m-auto review-card" data-num="3">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU"
+                    alt="">
+                  <h5>Soumyashree Upadhyay</h5>
+                  <div>
+                    <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </font>
+                  </div>
+                  <a href="https://g.co/kgs/fKYMHk" target="_blank">
+                    <p>All Tax is a one-stop solution for home renovation. Our experience was wonderful.
+                      Thank you All Tax team for your amazing service!</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Customer Speak Desktop Card 4 -->
+            <div class="card collection-card why-box">
+
+              <div class="review-slide text-center">
+                <div class="col-lg-12 m-auto review-card" data-num="4">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbF9MRc872DyqrFDJJ3MRq68r08IaEKCNGzAqYNpeSK38HOao_E2_50CtB2V4TGM_5ag&amp;usqp=CAU"
+                    alt="">
+                  <h5>Shikha Yadav</h5>
+                  <div>
+                    <font><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </font>
+                  </div>
+                  <a href="https://g.co/kgs/fKYMHk" target="_blank">
+                    <p>I am really impressed by the work of All Tax. The team was professional and completed the work
+                      before time!</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
-</div>
+
+
 
   </div>
+<!-- 🌐 FOOTER SECTION -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo & Intro -->
+    <div class="footer-logo">
+      <a href="home.html">
+        <img src="Logo.png" width="35%">
+      </a>
+      <p>Your trusted partner for financial and business solutions. We deliver excellence, innovation, and value to
+        our clients.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><i class="fa-solid fa-circle-info"></i> <a href="about.html">About Us</a></li>
+        <li><i class="fa-solid fa-user-plus"></i> <a href="reg.html">Register with Us</a></li>
+        <li><i class="fa-solid fa-phone"></i> <a href="contact.html">Contact Us</a></li>
+        <li><i class="fa-solid fa-bullhorn"></i> <a href="#">Follow Us</a></li>
+        <li><i class="fa-solid fa-toggle-on"></i> <a href="#">Associates Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div class="footer-social">
+      <h5>Follow Us</h5>
+      <div class="social-icons">
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>© 2025 All Tax. All Rights Reserved | Developed by <strong>Codepact</strong></p>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+  /* 🌐 Footer Styling */
+  .footer {
+    background: linear-gradient(135deg, #f85562, #ea6955);
+    color: #fff;
+    padding: 60px 20px 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+  }
+
+  .footer-logo {
+    flex: 1 1 300px;
+  }
+
+  .footer-logo img {
+    width: 160px;
+    margin-bottom: 15px;
+  }
+
+  .footer-logo p {
+    font-size: 0.95rem;
+    color: #fefefe;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    flex: 1 1 200px;
+  }
+
+  .footer-links h5,
+  .footer-social h5 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+  }
+
+  .footer-links h5::after,
+  .footer-social h5::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: #ffeb99;
+    left: 0;
+    bottom: -5px;
+    border-radius: 2px;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+
+  .footer-links ul li i {
+    color: #ffeb99;
+    font-size: 1rem;
+  }
+
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links ul li a:hover {
+    color: #ffeb99;
+  }
+
+  .footer-social {
+    flex: 1 1 200px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    background: #ffeb99;
+    color: #ea6955;
+    border-color: #ffeb99;
+    transform: translateY(-3px);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: #000000;
+  }
+
+  .footer-bottom strong {
+    color: #f9e48d;
+  }
+
+  
+  /* 🌐 Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-links ul li {
+      justify-content: center;
+    }
+
+    .footer-links h5::after,
+    .footer-social h5::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .footer-logo img {
+      margin: auto;
+    }
+
+    .social-icons {
+      justify-content: center;
+    }
+  }
+</style>
+
+
 
 
 
@@ -1601,7 +2065,7 @@
 
 
   <style>
-     @media(max-width: 767px) {
+    @media(max-width: 767px) {
       footer {
         display: none;
       }
@@ -1646,7 +2110,7 @@
     }
 
     .footer-logo a {
-      background-color: #ffffff;
+      /* background-color: #ffffff; */
       border-radius: 10px;
       padding: 20px;
     }
@@ -2029,57 +2493,63 @@
 </script>
 
 
+
 <!-- F&Q -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const faqButtons = document.querySelectorAll(".accordian-card .accordian-header button");
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqButtons = document.querySelectorAll(".accordian-card .accordian-header button");
 
-  faqButtons.forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
+    faqButtons.forEach((btn) => {
+      // Disable Bootstrap’s auto toggle by removing the attribute
+      btn.removeAttribute("data-bs-toggle");
 
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetSelector = btn.getAttribute("data-bs-target") || btn.getAttribute("data-target");
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
+
+        const isOpen = target.classList.contains("show");
+        let collapseInstance = bootstrap.Collapse.getInstance(target);
+
+        if (!collapseInstance) {
+          collapseInstance = new bootstrap.Collapse(target, { toggle: false });
+        }
+
+        // Manual toggle (now Bootstrap won't interfere)
+        if (isOpen) {
+          collapseInstance.hide();
+        } else {
+          collapseInstance.show();
+        }
+      });
+
+      // Smooth animation logic
       const targetSelector = btn.getAttribute("data-bs-target") || btn.getAttribute("data-target");
       const target = document.querySelector(targetSelector);
       if (!target) return;
 
-      const isOpen = target.classList.contains("show");
-      const collapseInstance =
-        bootstrap.Collapse.getInstance(target) ||
-        new bootstrap.Collapse(target, { toggle: false });
+      target.addEventListener("show.bs.collapse", function () {
+        btn.classList.remove("collapsed");
+        btn.parentElement.classList.add("open");
+        target.style.maxHeight = target.scrollHeight + "px";
+      });
 
-      // Toggle open/close on same click
-      if (isOpen) {
-        collapseInstance.hide();
-      } else {
-        collapseInstance.show();
-      }
-    });
+      target.addEventListener("hide.bs.collapse", function () {
+        btn.classList.add("collapsed");
+        btn.parentElement.classList.remove("open");
+        target.style.maxHeight = target.scrollHeight + "px";
+        setTimeout(() => {
+          target.style.maxHeight = "0px";
+        }, 10);
+      });
 
-    // For smooth height animation
-    const targetSelector = btn.getAttribute("data-bs-target") || btn.getAttribute("data-target");
-    const target = document.querySelector(targetSelector);
-    if (!target) return;
-
-    target.addEventListener("show.bs.collapse", function () {
-      btn.classList.remove("collapsed");
-      btn.parentElement.classList.add("open");
-      target.style.maxHeight = target.scrollHeight + "px";
-    });
-
-    target.addEventListener("hide.bs.collapse", function () {
-      btn.classList.add("collapsed");
-      btn.parentElement.classList.remove("open");
-      target.style.maxHeight = target.scrollHeight + "px";
-      setTimeout(() => {
-        target.style.maxHeight = "0px";
-      }, 10);
-    });
-
-    target.addEventListener("shown.bs.collapse", function () {
-      target.style.maxHeight = "none";
+      target.addEventListener("shown.bs.collapse", function () {
+        target.style.maxHeight = "none";
+      });
     });
   });
-});
 </script>
 
 
