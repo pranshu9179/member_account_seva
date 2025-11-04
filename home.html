@@ -331,7 +331,7 @@
   <div class="product-catagories-wrapper py-3 mt-2">
     <div class="container">
       <div class="text-center mt-5">
-        <h4 class="category-title">Find the Right Service for You</h4>
+        <h4 class="category-title " style="font-size: 1.8rem;">Find the Right Service for You</h4>
       </div>
 
       <div class="row g-2 rtl-flex-d-row-r">
@@ -398,13 +398,13 @@
           <!-- ../png.pngtree.com/png-vector/20231019/ourmid/pngtree-car-loan-property-png-image_10221511.png -->
         </div>
 
-        <div class="col-4">
+        <!-- <div class="col-4">
           <div class="card catagory-card">
             <div class="card-body px-2"><a href="login.html"><img src="./img/Category_Img/image_4.jpg" alt=""
                   style=" border-radius: 12px;"><span>Other Services</span></a></div>
           </div>
           <!-- ../img.freepik.com/premium-vector/customer-support-service-chat-icons-call-center-logo-hotline-concept-vector-illustration_476325-753.jpg -->
-        </div>
+        <!-- </div> --> 
 
       </div>
 
@@ -438,7 +438,7 @@
           width: 60px;
           height: 60px;
           object-fit: contain;
-          border-radius: 18px;
+          border-radius: 10px;
           border: 2px solid #3c3333;
           /* background: #fff; */
           padding: 16px;
@@ -455,7 +455,7 @@
         }
 
         .catagory-card:hover img {
-          border-color: #007bff;
+          border-color: #ef4654 ;
           transform: scale(1.06);
         }
 
@@ -521,7 +521,7 @@
           position: absolute;
           width: 60%;
           height: 3px;
-          background: linear-gradient(90deg, #007bff, #00c6ff);
+          background: linear-gradient(90deg, #f85562, #ea6955, #f79f52);
           bottom: -8px;
           left: 20%;
           border-radius: 2px;
@@ -534,7 +534,7 @@
       <!-- Hero Slides -->
       <div class="hero-wrapper" style="margin-top: 2vmax;  height: auto;">
         <div class="container">
-          <h4 class="hero-title text-center mt-5 fw-bold">
+          <h4 class="hero-title text-center mt-5 fw-bold" style="font-size: 1.8rem;">
             Connecting You to Quality Services
           </h4>
           <div class="">
@@ -674,7 +674,7 @@
 
           .single-hero-slide {
             width: 315px;
-            height: 200px !important ;
+            height: 200px !important;
             border-radius: 15px;
             aspect-ratio: 16/9;
             /* ✅ gives responsive height automatically */
@@ -686,7 +686,7 @@
 
           /* Owl carousel controls */
           .owl-stage-outer {
-            overflow: visible !important;
+            overflow: hidden !important;
           }
 
           .owl-item {
@@ -729,9 +729,10 @@
             display: none !important;
           }
 
-          .lab-view {
+          .lab-view { 
             display: block !important;
           }
+         
         }
       </style>
 
@@ -1021,10 +1022,11 @@
         .why-box:hover {
           transform: translateY(-6px);
           box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-          background: linear-gradient(145deg, #ffeaed, #e97d7d);
+          /* background: linear-gradient(145deg, #ffeaed, #e97d7d); */
           /* soft blue-white gradient */
         }
 
+        
         .why-slider .why-box img {
           width: 76px;
           margin-bottom: 18px;
@@ -1120,11 +1122,11 @@
             <div class="card-body">
               <div class="product-thumbnail-side">
                 <a class="product-thumbnail d-block" href="enquire.html" aria-label="Place order">
-                  <img src="img/Choose%20img/icon5.jpg" width="100" height="100" alt="Place order icon">
+                  <img src="./img/new/placeorder.jpg" width="100" height="100" alt="Place order icon">
                 </a>
               </div>
               <div class="product-description text-center">
-                <p>Place order</p>
+                <p>Place <br class="mobile-br"> order</p>
               </div>
             </div>
           </div>
@@ -1137,7 +1139,7 @@
             <div class="card-body">
               <div class="product-thumbnail-side">
                 <a class="product-thumbnail d-block" href="enquire.html" aria-label="Expert assigned">
-                  <img src="img/Choose%20img/icon1.jpg" width="100" height="100" alt="Expert assigned icon">
+                  <img src="./img/new/expertimage.jpg" width="100" height="100" alt="Expert assigned icon">
                 </a>
               </div>
               <div class="product-description text-center">
@@ -1154,7 +1156,7 @@
             <div class="card-body">
               <div class="product-thumbnail-side">
                 <a class="product-thumbnail d-block" href="enquire.html" aria-label="Executive will call">
-                  <img src="img/Choose%20img/icon2.jpg" width="100" height="100" alt="Executive call icon">
+                  <img src="./img/new/callingexecutiveimages.png" width="100" height="100" alt="Executive call icon">
                 </a>
               </div>
               <div class="product-description text-center">
@@ -1171,7 +1173,7 @@
             <div class="card-body">
               <div class="product-thumbnail-side">
                 <a class="product-thumbnail d-block" href="enquire.html" aria-label="Service completed">
-                  <img src="img/Choose%20img/icon4.jpg" width="100" height="100" alt="Service completed icon">
+                  <img src="./img/new/complete.jpg" width="100" height="100" alt="Service completed icon">
                 </a>
               </div>
               <div class="product-description text-center">
@@ -1202,21 +1204,21 @@
         position: relative;
       }
 
-      .section-title::after {
+      /* .section-title::after {
         content: "";
         width: 180px;
         height: 4px;
-        background: linear-gradient(90deg, #ebc20c, #e36a20);
+        background: linear-gradient(90deg, #f85562, #ea6955, #f79f52);
         display: block;
         border-radius: 8px;
         margin: 10px auto 0;
-      }
+      } */
 
       /* --- Row Layout --- */
       .steps-row {
         gap: 45px;
         align-items: stretch;
-        width: 1250px;
+        width: 100%;
       }
 
       /* --- Step Number --- */
@@ -1241,6 +1243,7 @@
       /* --- Card Style --- */
       .featured-product-card {
         border: none;
+        height: 200px !important;
         border-radius: 16px;
         position: relative;
         box-shadow: 0 6px 20px rgba(255, 100, 100, 0.1);
@@ -1486,10 +1489,6 @@
     </div>
 
   </div>
-
-
-
-
 
   <!-- Customer Speak -->
   <div class="">
@@ -1935,7 +1934,6 @@
 
 
 
-  </div>
   <!-- 🌐 FOOTER SECTION -->
   <footer class="footer">
     <div class="footer-container">

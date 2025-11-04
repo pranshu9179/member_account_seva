@@ -1158,6 +1158,7 @@ textarea:invalid {
 .collection-card {
   position: relative;
   z-index: 1;
+  
 }
 
 .collection-card img {
@@ -1844,7 +1845,8 @@ textarea:invalid {
 .suha-offcanvas-wrap {
   width: 240px !important;
   border-right: 0 !important;
-  background-color: #064093 !important;
+  background: linear-gradient(to right, #f85562 0, #ea6955 63%, #f79f52 100%) !important;
+    /* background:  */
 }
 
 .suha-offcanvas-wrap .btn-close {
