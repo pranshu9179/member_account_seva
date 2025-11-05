@@ -936,12 +936,18 @@
           left: 50%;
           transform: translateX(-50%);
           bottom: -10px;
-          width: 60%;
+          width: 25%;
           height: 3px;
           border-radius: 3px;
           background: linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%);
         }
 
+         @media (max-width: 767.98px) {
+          .hero-title::after {
+            width: 80%;
+            
+          }
+        }
         /* ✅ slide wrapper = text left + image right */
         .slide-wrapper {
           display: flex;
