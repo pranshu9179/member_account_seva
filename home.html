@@ -116,7 +116,7 @@
           <div class="btn-nav-drop nav-item  dropdown">
 
             <button href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> Select City :
-              Tendukheda&nbsp;&nbsp;&nbsp;
+              Bhopal&nbsp;&nbsp;&nbsp;
             </button>
             <div class="dropdown-menu">
               <a href="#" class="dropdown-item">--Select City--</a>
@@ -326,221 +326,71 @@
     }
   </style>
 
-  <!-- Product Categories -->
 
+  <!-- Product Categories -->
   <div class="product-catagories-wrapper py-3 mt-2">
     <div class="container">
-      <div class="text-center mt-5">
-        <h4 class="category-title " style="font-size: 1.8rem;">Find the Right Service for You</h4>
+
+      <!-- 🔔 Announcement Marquee -->
+      <div class="announcement-bar">
+        <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();"
+          onmouseout="this.start();">
+          <strong>Updates:</strong>
+          Get expert tax filing, GST registration, MSME & more • Fast support on WhatsApp • Limited-time offers —
+          <em>Enquire now</em>!
+        </marquee>
       </div>
 
-      <div class="row g-2 rtl-flex-d-row-r">
-        <div class="col-4">
-          <div class="card catagory-card ">
-            <div class="card-body px-2"><a href="login.html"><img src="./img/new/taxreturn.png" alt=""><span>Tax
-                  Return</span></a></div>
-          </div>
-        </div>
-        <!-- Catagory Card -->
-        <div class="col-4">
-          <div class="card catagory-card">
-            <div class="card-body px-2"><a href="login.html"><img src="new-img/gst1.png" alt=""
-                  style="background: transparent; border-radius: 10px;"><span>GST Filing</span></a></div>
-          </div>
-        </div>
-        <!-- Catagory Card -->
-        <div class="col-4">
-          <div class="card catagory-card">
-            <div class="card-body px-2"><a href="login.html"><img src="new-img/gst1.png" alt=""><span>New Gst
-                </span></a></div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="card catagory-card ">
-            <div class="card-body px-2"><a href="login.html"><img
-                  src="https://play-lh.googleusercontent.com/NYaKhT4JpJw0XRODwFL98b2rEh1tcCgcCRXBvXxKVQTRV_J7KzfBWTMK6l2EastF2sc=w240-h480-rw"
-                  alt="" style=" border-radius: 12px;"><span>MSME Registration</span></a></div>
-          </div>
-        </div>
-        <!-- Catagory Card -->
-        <div class="col-4">
-          <div class="card catagory-card">
-            <div class="card-body px-2"><a href="login.html"><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq49xWfFH9F2-E4bMBQTDbctGdbAJ88kjKdA&amp;s"
-                  alt="" style=" border-radius: 10px;"><span>Gumasta Reg.</span></a></div>
-          </div>
-        </div>
-        <!-- Catagory Card -->
-        <div class="col-4">
-          <div class="card catagory-card">
-            <div class="card-body px-2"><a href="login.html"><img src="./img/Category_Img/images_1.jpeg" alt=""
-                  style=" border-radius: 12px;"><span>Mudra Loan</span></a></div>
-            <!-- ../www.dialabank.com/wp-content/uploads/2020/10/Mudra-Loan.html -->
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="card catagory-card">
-            <div class="card-body px-2"><a href="login.html">
-                <img src="./img/Category_Img/image_2.png" alt="" style=" border-radius: 12px;"><span>GEM
-                  Registration</span></a></div>
-            <!-- img src == ../tenderduniya.com/asset/img/gem.png -->
-          </div>
-        </div>
-
-
-        <div class="col-4">
-          <div class="card catagory-card">
-            <div class="card-body px-2"><a href="login.html"><img src="./img/Category_Img/image_3.png"
-                  alt=""><span>Home/Vehicle Loan</span></a></div>
-          </div>
-          <!-- ../png.pngtree.com/png-vector/20231019/ourmid/pngtree-car-loan-property-png-image_10221511.png -->
-        </div>
-
-        <!-- <div class="col-4">
-          <div class="card catagory-card">
-            <div class="card-body px-2"><a href="login.html"><img src="./img/Category_Img/image_4.jpg" alt=""
-                  style=" border-radius: 12px;"><span>Other Services</span></a></div>
-          </div>
-          <!-- ../img.freepik.com/premium-vector/customer-support-service-chat-icons-call-center-logo-hotline-concept-vector-illustration_476325-753.jpg -->
-        <!-- </div> --> 
-
-      </div>
-
+      <!-- 🔔 Announcement Marquee CSS -->
       <style>
-        /* 🔹 Section Spacing */
-        .row.g-2 {
-          margin-top: 25px !important;
-          justify-content: center;
+        /* Announcement Marquee */
+        .announcement-bar {
+          margin-top: 48px;
+          /* space under navbar */
+          background: linear-gradient(90deg, #f14927, #ff9100);
+          border: 1px solid #f2c9c9;
+          /* border-radius: 10px; */
+          padding: 6px 10px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
         }
 
-        /* 🔹 Category Card */
-        .catagory-card {
-          border: none !important;
-          background: transparent !important;
-          text-align: center;
-          border-radius: 16px;
-          transition: all 0.3s ease;
+        /* Make marquee full width */
+        .announcement-bar {
+          width: 100vw !important;
+          margin-left: calc(-50vw + 50%);
         }
 
-        /* 🔹 Card Body */
-        .catagory-card .card-body {
-          padding: 15px 8px !important;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 10px;
-        }
-
-        /* 🔹 Square Outline Box for Icon */
-        .catagory-card img {
-          width: 60px;
-          height: 60px;
-          object-fit: contain;
-          border-radius: 10px;
-          border: 2px solid #3c3333;
-          /* background: #fff; */
-          padding: 16px;
-          /* creates the gap between image & border */
-          box-sizing: content-box;
-          transition: all 0.3s ease;
-        }
-
-        /* Keep box size consistent */
-        .catagory-card .card-body a {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .catagory-card:hover img {
-          border-color: #ef4654 ;
-          transform: scale(1.06);
-        }
-
-        /* 🔹 Category Text (Outside Box Look) */
-        .catagory-card span {
-          margin-top: 10px;
-          font-size: 0.95rem;
+        .announcement-bar marquee {
           font-weight: 600;
-          color: #333;
+          font-size: 0.95rem;
+          color: #000000;
+          line-height: 1.4;
           display: block;
         }
 
-        .catagory-card a {
-          text-decoration: none;
-        }
-
-        /* 🔹 Responsive Grid */
-        @media (min-width: 992px) {
-          .row.g-2>.col-4 {
-            flex: 0 0 25%;
-            max-width: 25%;
-          }
-        }
-
-        @media (max-width: 991px) and (min-width: 576px) {
-          .row.g-2>.col-4 {
-            flex: 0 0 33.33%;
-            max-width: 33.33%;
-          }
-        }
-
-        @media (max-width: 575px) {
-          .row.g-2>.col-4 {
-            flex: 0 0 50%;
-            max-width: 50%;
+        /* Slightly tighter on small screens */
+        @media (max-width: 575.98px) {
+          .announcement-bar {
+            margin-top: 45px;
+            /* padding: 6px 8px; */
           }
 
-          .catagory-card img {
-            width: 50px;
-            height: 50px;
-            padding: 14px;
-          }
-
-          .catagory-card span {
+          .announcement-bar marquee {
             font-size: 0.9rem;
           }
         }
-
-        /* 🔹 Section Title */
-        .category-title {
-          text-align: center;
-          font-weight: 700;
-          font-size: 1.8rem;
-          color: #222;
-          margin-top: 30px;
-          margin-bottom: 20px;
-          position: relative;
-          display: inline-block;
-        }
-
-        .category-title::after {
-          content: "";
-          position: absolute;
-          width: 60%;
-          height: 3px;
-          background: linear-gradient(90deg, #f85562, #ea6955, #f79f52);
-          bottom: -8px;
-          left: 20%;
-          border-radius: 2px;
-        }
       </style>
 
-
-
-
       <!-- Hero Slides -->
-      <div class="hero-wrapper" style="margin-top: 2vmax;  height: auto;">
+      <div class="hero-wrapper" style="margin-top: 25px !important;  height: auto;">
         <div class="container">
-          <h4 class="hero-title text-center mt-5 fw-bold" style="font-size: 1.8rem;">
+          <h4 class="hero-title text-center  fw-bold" style="font-size: 1.8rem;">
             Connecting You to Quality Services
           </h4>
           <div class="">
             <!-- Hero Slides-->
             <div class="hero-slides  owl-carousel mob-view owl-loaded owl-drag"
-              style="margin-top: 7vmax;   border-radius: 15px; overflow: hidden;">
+              style="margin-top: 5vmax;   border-radius: 15px; overflow: hidden;">
               <!-- Single Hero Slide-->
 
               <!-- Mobile view -->
@@ -723,19 +573,266 @@
           }
         }
 
+        /* Gradient underline under "Connecting You to Quality Services" */
+        .hero-title {
+          position: relative;
+        }
+
+        .hero-title::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -10px;
+          /* distance below the text */
+          width: 25%;
+          height: 3px;
+          border-radius: 3px;
+          background: linear-gradient(90deg, #f85562, #ea6955, #f79f52);
+        }
+
+        /* Tweak size/offset on small screens */
+        @media (max-width: 767.98px) {
+          .hero-title::after {
+            width: 60%;
+            height: 3px;
+            bottom: -8px;
+                    left: 50.50%
+          }
+        }
+
+
         /* Desktop */
         @media (min-width: 768px) {
           .mob-view {
             display: none !important;
           }
 
-          .lab-view { 
+          .lab-view {
             display: block !important;
           }
-         
+
         }
       </style>
 
+      <!-- Product Categories list -->
+      <div class="text-center mt-5">
+        <h4 class="category-title " style="font-size: 1.8rem;">Find the Right Service for You</h4>
+      </div>
+      <div class="row g-2 rtl-flex-d-row-r">
+        <div class="col-4">
+          <div class="card catagory-card ">
+            <div class="card-body px-2"><a href="login.html"><img src="./img/new/taxreturn.png" alt=""><span>Tax
+                  Return</span></a></div>
+          </div>
+        </div>
+        <!-- Catagory Card -->
+        <div class="col-4">
+          <div class="card catagory-card">
+            <div class="card-body px-2"><a href="login.html"><img src="new-img/gst1.png" alt=""
+                  style="background: transparent; border-radius: 10px;"><span>GST Filing</span></a></div>
+          </div>
+        </div>
+        <!-- Catagory Card -->
+        <div class="col-4">
+          <div class="card catagory-card">
+            <div class="card-body px-2"><a href="login.html"><img src="new-img/gst1.png" alt=""><span>New Gst
+                </span></a></div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card catagory-card ">
+            <div class="card-body px-2"><a href="login.html"><img
+                  src="https://play-lh.googleusercontent.com/NYaKhT4JpJw0XRODwFL98b2rEh1tcCgcCRXBvXxKVQTRV_J7KzfBWTMK6l2EastF2sc=w240-h480-rw"
+                  alt="" style=" border-radius: 12px;"><span>MSME Registration</span></a></div>
+          </div>
+        </div>
+        <!-- Catagory Card -->
+        <div class="col-4">
+          <div class="card catagory-card">
+            <div class="card-body px-2"><a href="login.html"><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq49xWfFH9F2-E4bMBQTDbctGdbAJ88kjKdA&amp;s"
+                  alt="" style=" border-radius: 10px;"><span>Gumasta Reg.</span></a></div>
+          </div>
+        </div>
+        <!-- Catagory Card -->
+        <div class="col-4">
+          <div class="card catagory-card">
+            <div class="card-body px-2"><a href="login.html"><img src="./img/Category_Img/images_1.jpeg" alt=""
+                  style=" border-radius: 12px;"><span>Mudra Loan</span></a></div>
+            <!-- ../www.dialabank.com/wp-content/uploads/2020/10/Mudra-Loan.html -->
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card catagory-card">
+            <div class="card-body px-2"><a href="login.html">
+                <img src="./img/Category_Img/image_2.png" alt="" style=" border-radius: 12px;"><span>GEM
+                  Registration</span></a></div>
+            <!-- img src == ../tenderduniya.com/asset/img/gem.png -->
+          </div>
+        </div>
+
+
+        <div class="col-4">
+          <div class="card catagory-card">
+            <div class="card-body px-2"><a href="login.html"><img src="./img/Category_Img/image_3.png"
+                  alt=""><span>Home/Vehicle Loan</span></a></div>
+          </div>
+          <!-- ../png.pngtree.com/png-vector/20231019/ourmid/pngtree-car-loan-property-png-image_10221511.png -->
+        </div>
+
+        <!-- <div class="col-4">
+          <div class="card catagory-card">
+            <div class="card-body px-2"><a href="login.html"><img src="./img/Category_Img/image_4.jpg" alt=""
+                  style=" border-radius: 12px;"><span>Other Services</span></a></div>
+          </div>
+          <!-- ../img.freepik.com/premium-vector/customer-support-service-chat-icons-call-center-logo-hotline-concept-vector-illustration_476325-753.jpg -->
+        <!-- </div> -->
+
+      </div>
+
+      <style>
+        /* 🔹 Section Spacing */
+        .row.g-2 {
+          margin-top: 25px !important;
+          justify-content: center;
+        }
+
+        /* 🔹 Category Card */
+        .catagory-card {
+          border: none !important;
+          background: transparent !important;
+          text-align: center;
+          border-radius: 16px;
+          transition: all 0.3s ease;
+        }
+
+        /* 🔹 Card Body */
+        .catagory-card .card-body {
+          padding: 15px 8px !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        /* 🔹 Square Outline Box for Icon */
+        .catagory-card img {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+          border-radius: 10px;
+          border: 2px solid #000000;
+          /* background: #fff; */
+          padding: 16px;
+          /* creates the gap between image & border */
+          box-sizing: content-box;
+          transition: all 0.3s ease;
+        }
+
+        /* Keep box size consistent */
+        .catagory-card .card-body a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .catagory-card:hover img {
+          border-color: #ffffff;
+          transform: scale(1.06);
+        }
+
+        /* 🔹 Category Text (Outside Box Look) */
+        .catagory-card span {
+          margin-top: 10px;
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: #333;
+          display: block;
+        }
+
+        .catagory-card a {
+          text-decoration: none;
+        }
+
+        /* 🔹 Responsive Grid */
+        @media (min-width: 992px) {
+          .row.g-2>.col-4 {
+            flex: 0 0 25%;
+            max-width: 25%;
+          }
+        }
+
+        @media (max-width: 991px) and (min-width: 576px) {
+          .row.g-2>.col-4 {
+            flex: 0 0 33.33%;
+            max-width: 33.33%;
+          }
+        }
+
+        /* @media (max-width: 575px) {
+          .row.g-2>.col-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          .catagory-card img {
+            width: 50px;
+            height: 50px;
+            padding: 14px;
+          }
+
+          .catagory-card span {
+            font-size: 0.9rem;
+          }
+        } */
+
+        /* 🔹 Mobile: 4 cards per row & keep icon outline */
+        @media (max-width: 575px) {
+          .row.g-2>.col-4 {
+            flex: 0 0 25%;
+            max-width: 25%;
+          }
+
+          /* Tweak icon size so 4-up fits nicely */
+          .catagory-card img {
+            width: 44px;
+            height: 44px;
+            padding: 10px;
+            /* border: 2px solid #3c3333 !important;  */
+            box-sizing: content-box;
+          }
+
+          .catagory-card span {
+            font-size: 0.82rem;
+          }
+        }
+
+        /* 🔹 Section Title */
+        .category-title {
+          text-align: center;
+          font-weight: 700;
+          font-size: 1.8rem;
+          color: #222;
+          margin-top: 30px;
+          margin-bottom: 20px;
+          position: relative;
+          display: inline-block;
+        }
+
+        .category-title::after {
+          content: "";
+          position: absolute;
+          width: 60%;
+          height: 3px;
+          /* background: linear-gradient(90deg, #f85562, #ea6955, #f79f52); */
+          bottom: -8px;
+          left: 20%;
+          border-radius: 2px;
+        }
+      </style>
 
       <!-- CTA Area -->
       <!-- <div class="container mt-4">
@@ -747,8 +844,6 @@
                   <div class="col-9">
                     <h4 class="text-white mb-1 col-lg-6 mb-2">Expert fees and consultation<br> </h4>
                     <a class="btn btn-warning mb-3" href="enquire.html">Grab this offer Now</a>
-
-
                     <p>
                       <font color="white">* T&C Applied</font>
                     </p>
@@ -1026,7 +1121,7 @@
           /* soft blue-white gradient */
         }
 
-        
+
         .why-slider .why-box img {
           width: 76px;
           margin-bottom: 18px;
@@ -1394,18 +1489,6 @@
       }
     </style>
   </div>
-  </div>
-
-
-
-
-  <!-- Dark Mode END -->
-
-
-
-
-
-  <!--<h4 class="text-center mb-3">Frequently Asked Questions </h4>-->
 
 
   <!-- Frequently Asked Questions -->
@@ -1713,7 +1796,7 @@
           width: 80px;
           height: 90px;
           border-radius: 35%;
-          border: 3px solid #ffb400;
+          border: 3px solid #ff00c8;
           /* margin-bottom: 10px; */
           box-sizing: border-box;
         }
@@ -1797,6 +1880,7 @@
             flex: 0 0 85%;
             scroll-snap-align: center;
             border-radius: 18px;
+            color: gainsboro;
             background: #ffffff;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -1815,7 +1899,7 @@
           }
 
           .review-card img {
-            border: 3px solid #ffb400;
+            border: 3px solid #ff00c8;
           }
 
           .review-card h5 {
@@ -1932,8 +2016,6 @@
 
   </div>
 
-
-
   <!-- 🌐 FOOTER SECTION -->
   <footer class="footer">
     <div class="footer-container">
@@ -1973,7 +2055,7 @@
 
     <!-- Copyright -->
     <div class="footer-bottom">
-      <p>© 2025 All Tax. All Rights Reserved | Developed by <strong>Codepact</strong></p>
+      <p>© 2025 All Tax. All Rights Reserved | Developed by <strong>@ Codepact</strong></p>
     </div>
   </footer>
 
@@ -1982,12 +2064,27 @@
 
   <style>
     /* 🌐 Footer Styling */
-    .footer {
+    /* .footer {
       background: linear-gradient(135deg, #f85562, #ea6955);
       color: #fff;
       padding: 60px 20px 20px;
       font-family: "Poppins", sans-serif;
-    }
+    } */
+
+    .footer {
+  background: linear-gradient(90deg, #4483e9, #74a1ed, #e341b2);
+  background-size: 200% 200%;
+  animation: moveGradient 12s ease infinite; /* run the gradient */
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+@keyframes moveGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
     .footer-container {
       display: flex;
@@ -2009,7 +2106,7 @@
 
     .footer-logo p {
       font-size: 0.95rem;
-      color: #fefefe;
+      color: #000000;
       line-height: 1.6;
     }
 
@@ -2031,7 +2128,7 @@
       position: absolute;
       width: 40px;
       height: 3px;
-      background: #ffeb99;
+      background: #bd00e7;
       left: 0;
       bottom: -5px;
       border-radius: 2px;
@@ -2052,7 +2149,7 @@
     }
 
     .footer-links ul li i {
-      color: #ffeb99;
+      color: #000000;
       font-size: 1rem;
     }
 
@@ -2063,7 +2160,7 @@
     }
 
     .footer-links ul li a:hover {
-      color: #ffeb99;
+      color: #9e0066;
     }
 
     .footer-social {
@@ -2077,7 +2174,7 @@
     }
 
     .social-icons a {
-      color: #fff;
+      color: #000000;
       font-size: 1.2rem;
       width: 36px;
       height: 36px;
@@ -2090,9 +2187,9 @@
     }
 
     .social-icons a:hover {
-      background: #ffeb99;
-      color: #ea6955;
-      border-color: #ffeb99;
+      background: #ffffff;
+      color: #9e0066;
+      border-color: #b700ff;
       transform: translateY(-3px);
     }
 
@@ -2109,7 +2206,7 @@
     }
 
     .footer-bottom strong {
-      color: #f9e48d;
+      color: #f905bc;
     }
 
 
@@ -2168,7 +2265,9 @@
     .enquire {
       z-index: 99999999999999999999999999999999999999999999999999999999999999999999;
       /*background-color: #51B8F2;*/
-      background: linear-gradient(to right, #f85562 0, #ea6955 63%, #f79f52 100%);
+       background: linear-gradient(90deg, #4483e9, #022f7d, #e341b2);
+  background-size: 200% 200%;
+  animation: moveGradient 12s ease infinite; /* run the gradient */
 
       border-radius: 5px;
       border: none;
@@ -2185,6 +2284,12 @@
       font-size: 1.1rem;
       cursor: pointer;
     }
+    @keyframes moveGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
   </style>
 
 
@@ -2531,12 +2636,13 @@
 </script>
 
 
+<!-- Why Choose Us Style -->
 
 <style>
   @media (max-width: 576px) {
     .mobile-why-choose-us {
       display: block !important;
-      background: #f7e5a9;
+      /* background: #f7e5a9; */
       padding: 32px 0 12px 0;
     }
 
@@ -2562,10 +2668,10 @@
       width: 92vw;
       max-width: 340px;
       margin: 0 auto;
-      background: #fff;
+      /* background: #fff; */
       border-radius: 28px;
       padding: 32px 8px 20px 8px;
-      box-shadow: 0 4px 32px 4px #efe4b5;
+      /* box-shadow: 0 4px 32px 4px #efe4b5; */
       opacity: 0;
       z-index: 1;
       transition: opacity 0.8s;
@@ -2634,6 +2740,8 @@
     }
   }
 </style>
+
+
 
 <!-- How Its Work Script -->
 <script>
