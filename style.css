@@ -21,9 +21,9 @@ html {
   overflow-x: hidden;
   /* background-color: #e9eeff; */
   /* background-color: #f0dc95; */
-      background: linear-gradient(90deg, #4483e9, #74a1ed, #e341b2);
+    background: linear-gradient(90deg, #b22382, #514FA1, #b22382);
   background-size: 200% 200%;
-  animation: moveGradient 6s ease infinite;
+  /* animation: moveGradient 6s ease infinite; */
   scrollbar-width: thin;
   padding-right: 0 !important;
   letter-spacing: -0.5px;
@@ -1850,16 +1850,16 @@ textarea:invalid {
 .suha-offcanvas-wrap {
   width: 240px !important;
   border-right: 0 !important;
- background: linear-gradient(90deg, #4483e9, #183f81, #e341b2);
+background: linear-gradient(135deg, #b22382, #1458cf,#b22382);
   background-size: 200% 200%;
-  animation: moveGradient 12s ease infinite; /* run the gradient */
+  /* animation: moveGradient 12s ease infinite; run the gradient */
   /* background:  */
 }
-@keyframes moveGradient {
+/* @keyframes moveGradient {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
+} */
 
 
 .suha-offcanvas-wrap .btn-close {
