@@ -45,7 +45,7 @@ h6 {
 }
 
 p {
-  color: #747794;
+  color: #ffffff;
 }
 
 a,
@@ -148,9 +148,9 @@ textarea:invalid {
   box-shadow: none !important;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   .container {
-    max-width: 95%;
+    max-width: 100% !important;
   }
 }
 
@@ -1019,7 +1019,7 @@ textarea:invalid {
 
 .page-content-wrapper {
   margin-top: 50px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .pwa-install-alert {

@@ -336,1074 +336,860 @@
 
   <!-- Product Categories -->
   <div class="product-catagories-wrapper py-3 mt-2">
-    <div class="container">
 
-      <!-- 🔔 Announcement Marquee -->
-      <div class="announcement-bar">
-        <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();"
-          onmouseout="this.start();">
-          <strong>Updates:</strong>
-          Get expert tax filing, GST registration, MSME & more • Fast support on WhatsApp • Limited-time offers —
-          <em>Enquire now</em>!
-        </marquee>
-      </div>
+    <!-- 🔔 Announcement Marquee -->
+    <div class="announcement-bar">
+      <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();"
+        onmouseout="this.start();">
+        <strong>Updates:</strong>
+        Get expert tax filing, GST registration, MSME & more • Fast support on WhatsApp • Limited-time offers —
+        <em>Enquire now</em>!
+      </marquee>
+    </div>
+    <!-- 🔔 Announcement Marquee CSS -->
+    <style>
+      /* Announcement Marquee */
+      .announcement-bar {
+        margin-top: 50px;
+        /* space under navbar */
+        background: linear-gradient(90deg, #b22382, #1458cf, #b22382);
+        border: 2px solid #bebebe;
+        /* border-radius: 10px; */
+        border-top: none;
+        padding: 6px 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      }
 
-      <!-- 🔔 Announcement Marquee CSS -->
-      <style>
-        /* Announcement Marquee */
+      /* Make marquee full width */
+      .announcement-bar {
+        width: 100vw !important;
+        margin-left: calc(-50vw + 50%);
+      }
+
+      .announcement-bar marquee {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #ebebeb;
+        line-height: 1.4;
+        display: block;
+      }
+
+      /* Slightly tighter on small screens */
+      @media (max-width: 575.98px) {
         .announcement-bar {
-          margin-top: 50px;
-          /* space under navbar */
-          background: linear-gradient(90deg, #b22382, #1458cf, #b22382);
-          border: 2px solid #373737;
-          /* border-radius: 10px; */
-          border-top: none;
-          padding: 6px 10px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-        }
-
-        /* Make marquee full width */
-        .announcement-bar {
-          width: 100vw !important;
-          margin-left: calc(-50vw + 50%);
+          margin-top: 45px;
+          /* padding: 6px 8px; */
         }
 
         .announcement-bar marquee {
-          font-weight: 600;
-          font-size: 0.95rem;
-          color: #ebebeb;
-          line-height: 1.4;
-          display: block;
+          font-size: 0.9rem;
         }
-
-        /* Slightly tighter on small screens */
-        @media (max-width: 575.98px) {
-          .announcement-bar {
-            margin-top: 45px;
-            /* padding: 6px 8px; */
-          }
-
-          .announcement-bar marquee {
-            font-size: 0.9rem;
-          }
-        }
-      </style>
+      }
+    </style>
 
 
+    <!-- ✅ HERO SLIDER START -->
+    <div class="hero-wrapper">
+      <div class="container-fluid px-0">
 
-      <!-- Hero Slides -->
-      <!-- <div class="hero-wrapper" style="margin-top: 25px !important;  height: auto;">
-        <div class="container">
-          <h4 class="hero-title text-center  fw-bold" style="font-size: 1.8rem;">
-            Connecting You to Quality Services
-          </h4>
-          <div class="">
-            <!-- Hero Slides-->
-      <!-- <div class="hero-slides  owl-carousel mob-view owl-loaded owl-drag"
-              style="margin-top: 5vmax;   border-radius: 15px; overflow: hidden;"> -->
-      <!-- Single Hero Slide-->
+        <!-- ✅ MOBILE VIEW -->
+        <div class="hero-slides owl-carousel mob-view">
 
-      <!-- Mobile view -->
-
-      <!-- <div class="owl-stage-outer">
-                <div class="owl-stage" style="transition: all; object-fit: contain;">
-                  <div class="owl-item">
-                    <!-- <a href="enquire.html"><div>assddffdf</div></a> -->
-      <!-- <a href="enquire.html">
-                      <div class="single-hero-slide slide " style="background-image: url('./img/new/slide1.jpeg ')">
-                      </div>
-                    </a>
+          <!-- SLIDE 1 -->
+          <div>
+            <a href="enquire.html">
+              <div class="single-hero-slide gradient-slide">
+                <div class="slide-wrapper">
+                  <div class="slide-left">
+                    <h2 class="typing">Fast & Reliable</h2>
+                    <p>We help you get your documentation done quickly.</p>
+                    <button class="slide-btn">Know More</button>
                   </div>
-
-                  <div class="owl-item"><a href="enquire.html">
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/30954633/pexels-photo-30954633.jpeg?t=st=1738235417~exp=1738239017~hmac=eb6d10c206ec6c959f38547a4edbb55f544196fe041523ebb638bdef782d475f&amp;w=1060')">
-                      </div>
-                    </a></div>
-
-                  <div class="owl-item"><a href="enquire.html">
-
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/5745021/pexels-photo-5745021.jpeg?t=st=1738235417~exp=1738239017~hmac=eb6d10c206ec6c959f38547a4edbb55f544196fe041523ebb638bdef782d475f&amp;w=1060')">
-                      </div>
-                    </a></div>
-
-                  <div class="owl-item"><a href="enquire.html">
-
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/30954633/pexels-photo-30954633.jpeg?t=st=1738235417~exp=1738239017~hmac=eb6d10c206ec6c959f38547a4edbb55f544196fe041523ebb638bdef782d475f&amp;w=1060')">
-                      </div>
-                    </a></div>
-                </div>
-              </div> -->
-
-      <!-- <div class="owl-nav disabled">
-                <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
-                <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
-              </div>
-              <div class="owl-dots">
-                <button role="button" class="owl-dot"><span></span></button>
-                <button role="button" class="owl-dot"><span></span></button>
-                <button role="button" class="owl-dot"><span></span></button>
-                <button role="button" class="owl-dot "><span></span></button>
-
-              </div>
-            </div> -->
-      <!-- Single Hero Slide-->
-      <!-- <div class="hero-slides  owl-carousel lab-view owl-loaded owl-drag"
-              style="margin-top: 3vmax;  border-radius: 15px; overflow: hidden; ">
-              <div class="owl-stage-outer">
-                <div class="owl-stage">
-
-                  <div class="owl-item " style="width: 1859px;"><a href="enquire.html">
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/5745021/pexels-photo-5745021.jpeg?t=st=1738233943~exp=1738237543~hmac=039afd021fe7b004459aaf1aa60526524c2c913959ad3075560e5aa37c02f229&amp;w=1380')">
-                      </div>
-                    </a></div>
-                  <div class="owl-item " style="width: 1859px;"><a href="enquire.html">
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/30954633/pexels-photo-30954633.jpeg?t=st=1738235417~exp=1738239017~hmac=eb6d10c206ec6c959f38547a4edbb55f544196fe041523ebb638bdef782d475f&amp;w=1060')">
-                      </div>
-                    </a></div>
-
-                  <div class="owl-item " style="width: 1859px;"><a href="enquire.html">
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/5745021/pexels-photo-5745021.jpeg?t=st=1738238168~exp=1738241768~hmac=7f34403883277ba29567ddb0fd1ba4f0c2915afeb40169165e3bce0a503ffb76&amp;w=1380')">
-                      </div>
-                    </a></div>
-                  <div class="owl-item " style="width: 1859px;"><a href="enquire.html">
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/30954633/pexels-photo-30954633.jpeg?t=st=1738233943~exp=1738237543~hmac=039afd021fe7b004459aaf1aa60526524c2c913959ad3075560e5aa37c02f229&amp;w=1380')">
-                      </div>
-                    </a></div>
-                  <div class="owl-item " style="width: 1859px;"><a href="enquire.html">
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/5745021/pexels-photo-5745021.jpeg?t=st=1738235417~exp=1738239017~hmac=eb6d10c206ec6c959f38547a4edbb55f544196fe041523ebb638bdef782d475f&amp;w=1060')">
-                      </div>
-                    </a></div>
-
-                  <div class="owl-item " style="width: 1859px;"><a href="enquire.html">
-                      <div class="single-hero-slide slide "
-                        style="background-image: url('https://images.pexels.com/photos/30954633/pexels-photo-30954633.jpeg?t=st=1738238168~exp=1738241768~hmac=7f34403883277ba29567ddb0fd1ba4f0c2915afeb40169165e3bce0a503ffb76&amp;w=1380')">
-                      </div>
-                    </a></div>
+                  <div class="slide-right">
+                    <img src="./img/new/slider1.png" />
+                  </div>
                 </div>
               </div>
-              <div class="owl-nav disabled">
-                <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
-                <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
+            </a>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div>
+            <a href="enquire.html">
+              <div class="single-hero-slide gradient-slide">
+                <div class="slide-wrapper">
+                  <div class="slide-left">
+                    <h2 class="typing">Verified Professionals</h2>
+                    <p>Handled by certified experts ensuring accuracy.</p>
+                    <button class="slide-btn">Explore Services</button>
+                  </div>
+                  <div class="slide-right">
+                    <img src="./img/new/slider2.png" />
+                  </div>
+                </div>
               </div>
-              <div class="owl-dots">
-                <button role="button active" class="owl-dot"><span></span></button>
-                <button role="button" class="owl-dot"><span></span></button>
-                <button role="button" class="owl-dot"><span></span></button>
-                <button role="button" class="owl-dot"><span></span></button>
+            </a>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div>
+            <a href="enquire.html">
+              <div class="single-hero-slide gradient-slide">
+                <div class="slide-wrapper">
+                  <div class="slide-left">
+                    <h2 class="typing">Quick Turnaround</h2>
+                    <p>Save time — we process your requests faster.</p>
+                    <button class="slide-btn">Get Started</button>
+                  </div>
+                  <div class="slide-right">
+                    <img src="./img/new/slider3.png" />
+                  </div>
+                </div>
               </div>
-            </div> -->
-      <!-- </div>
+            </a>
+          </div>
+
+          <!-- SLIDE 4 -->
+          <div>
+            <a href="enquire.html">
+              <div class="single-hero-slide gradient-slide">
+                <div class="slide-wrapper">
+                  <div class="slide-left">
+                    <h2 class="typing">Affordable Pricing</h2>
+                    <p>No hidden charges — transparent & budget-friendly.</p>
+                    <button class="slide-btn">Contact Us</button>
+                  </div>
+                  <div class="slide-right">
+                    <img src="./img/new/slider4.png" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
-      </div> -->
-      <!-- Hero Slide Css -->
-      <!-- <style>
-        /* Default (Desktop) */
-        .single-hero-slide {
-          width: 100%;
-          height: 512px !important;
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          border-radius: 15px;
-        }
 
-        /* Mobile & small tablet */
-        @media (max-width: 767.98px) {
-          .lab-view {
-            display: none !important;
-          }
+        <!-- ✅ DESKTOP VIEW -->
+        <div class="hero-slides owl-carousel lab-view">
 
-          .mob-view {
-            display: block !important;
-          }
-
-          /* Keep slides visible */
-          .hero-slides.mob-view {
-            background: none !important;
-            margin-top: 10vmax;
-            overflow: hidden !important;
-          }
-
-          .single-hero-slide {
-            width: 315px;
-            height: 200px !important;
-            border-radius: 15px;
-            aspect-ratio: 16/9;
-            /* ✅ gives responsive height automatically */
-            /* background-size: contain !important; */
-            background-position: center center !important;
-            /* background-repeat: no-repeat !important; */
-            display: block;
-          }
-
-          /* Owl carousel controls */
-          .owl-stage-outer {
-            overflow: hidden !important;
-          }
-
-          .owl-item {
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .owl-dots {
-            text-align: center;
-            margin-top: 10px;
-          }
-
-          .owl-dot span {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: #ffd24d;
-            margin: 0 6px;
-            transition: all 0.2s ease;
-          }
-
-          .owl-dot.active span,
-          .owl-dot:hover span {
-            background: #ff9b00;
-            transform: scale(1.2);
-          }
-
-          /* Text */
-          .hero-title {
-            font-size: 1.4rem;
-            margin-top: 4vmax;
-            text-align: center;
-          }
-        }
-
-        /* Gradient underline under "Connecting You to Quality Services" */
-        .hero-title {
-          position: relative;
-        }
-
-        .hero-title::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -10px;
-          /* distance below the text */
-          width: 25%;
-          height: 3px;
-          border-radius: 3px;
-          background: linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%);
-        }
-
-        /* Tweak size/offset on small screens */
-        @media (max-width: 767.98px) {
-          .hero-title::after {
-            width: 60%;
-            height: 3px;
-            bottom: -8px;
-            left: 50.50%
-          }
-        }
-
-
-        /* Desktop */
-        @media (min-width: 768px) {
-          .mob-view {
-            display: none !important;
-          }
-
-          .lab-view {
-            display: block !important;
-          }
-
-        }
-      </style> -->
-
-
-
-      <!-- ✅ HERO SLIDER START -->
-      <div class="hero-wrapper" style="margin-top: 25px !important; height: auto;">
-        <div class="container-fluid px-0">
-          <h4 class="hero-title text-center fw-bold" style="font-size: 1.3rem;">
-            Connecting You to Quality Services
-          </h4>
+          <!-- same slides as mobile (no changes) -->
 
           <div>
-
-            <!-- ✅ MOBILE VIEW SLIDER -->
-            <div class="hero-slides owl-carousel mob-view owl-loaded owl-drag"
-              style="margin-top: 5vmax; border-radius: 15px; overflow: hidden;">
-              <div class="owl-stage-outer">
-                <div class="owl-stage">
-
-                  <!-- ✅ SLIDE 1 -->
-                  <div class="owl-item">
-                    <a href="enquire.html">
-                      <div class="single-hero-slide gradient-slide">
-                        <div class="slide-wrapper">
-                          <div class="slide-left animated-left">
-                            <h2 class="typing">Fast & Reliable</h2>
-                            <p>We help you get your documentation done quickly.</p>
-                            <button class="slide-btn">Know More</button>
-                          </div>
-                          <div class="slide-right animated-right">
-                            <img src="./img/new/slider1.png">
-                          </div>
-                        </div>
-                      </div>
-                    </a>
+            <a href="enquire.html">
+              <div class="single-hero-slide gradient-slide">
+                <div class="slide-wrapper">
+                  <div class="slide-left">
+                    <h2 class="typing">Fast & Reliable</h2>
+                    <p>We help you get your documentation done quickly.</p>
+                    <button class="slide-btn">Know More</button>
                   </div>
-
-                  <!-- ✅ SLIDE 2 - Verified Professionals -->
-                  <div class="owl-item">
-                    <a href="enquire.html">
-                      <div class="single-hero-slide gradient-slide">
-                        <div class="slide-wrapper">
-                          <div class="slide-left animated-left">
-                            <h2 class="typing">Verified Professionals</h2>
-                            <p>Handled by certified experts ensuring accuracy.</p>
-                            <button class="slide-btn">Explore Services</button>
-                          </div>
-
-                          <!-- ✅ NEW IMAGE (Verification / Check Badge) -->
-                          <div class="slide-right animated-right">
-                            <img src="./img/new/slider2.png">
-                          </div>
-
-                        </div>
-                      </div>
-                    </a>
+                  <div class="slide-right">
+                    <img src="./img/new/slider1.png" />
                   </div>
-
-                  <!-- ✅ SLIDE 3 -->
-                  <div class="owl-item">
-                    <a href="enquire.html">
-                      <div class="single-hero-slide gradient-slide">
-                        <div class="slide-wrapper">
-                          <div class="slide-left animated-left">
-                            <h2 class="typing">Quick Turnaround</h2>
-                            <p>Save time — we process your requests faster.</p>
-                            <button class="slide-btn">Get Started</button>
-                          </div>
-                          <div class="slide-right animated-right">
-                            <img src="./img/new/slider3.png">
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-
-                  <!-- ✅ SLIDE 4 - Affordable Pricing -->
-                  <div class="owl-item">
-                    <a href="enquire.html">
-                      <div class="single-hero-slide gradient-slide">
-                        <div class="slide-wrapper">
-                          <div class="slide-left animated-left">
-                            <h2 class="typing">Affordable Pricing</h2>
-                            <p>No hidden charges — transparent & budget-friendly.</p>
-                            <button class="slide-btn">Contact Us</button>
-                          </div>
-
-                          <!-- ✅ NEW IMAGE (Indian Rupee ₹ sign) -->
-                          <div class="slide-right animated-right">
-                            <img src="./img/new/slider4.png" alt="Rupee Icon">
-                          </div>
-
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-
                 </div>
               </div>
-            </div>
-
-            <!-- ✅ DESKTOP VIEW SLIDER (same content) -->
-            <div class="hero-slides owl-carousel lab-view owl-loaded owl-drag"
-              style="margin-top: 3vmax; border-radius: 15px; overflow: hidden;">
-              <div class="owl-stage-outer">
-                <div class="owl-stage">
-
-                  <!-- (duplicate the same slides for desktop — already responsive) -->
-
-                  <div class="owl-item">
-                    <a href="enquire.html">
-                      <div class="single-hero-slide gradient-slide">
-                        <div class="slide-wrapper">
-                          <div class="slide-left animated-left">
-                            <h2 class="typing">Fast & Reliable</h2>
-                            <p>We help you get your documentation done quickly.</p>
-                            <button class="slide-btn">Know More</button>
-                          </div>
-                          <div class="slide-right animated-right">
-                            <img src="./img/new/slider1.png">
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-
-                  <!-- ✅ SLIDE 2 - Verified Professionals -->
-                  <div class="owl-item">
-                    <a href="enquire.html">
-                      <div class="single-hero-slide gradient-slide">
-                        <div class="slide-wrapper">
-                          <div class="slide-left animated-left">
-                            <h2 class="typing">Verified Professionals</h2>
-                            <p>Handled by certified experts ensuring accuracy.</p>
-                            <button class="slide-btn">Explore Services</button>
-                          </div>
-
-                          <!-- ✅ NEW IMAGE (Verification / Check Badge) -->
-                          <div class="slide-right animated-right">
-                            <img src="./img/new/slider2.png">
-                          </div>
-
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="owl-item">
-                    <a href="enquire.html">
-                      <div class="single-hero-slide gradient-slide">
-                        <div class="slide-wrapper">
-                          <div class="slide-left animated-left">
-                            <h2 class="typing">Quick Turnaround</h2>
-                            <p>Save time — we process your requests faster.</p>
-                            <button class="slide-btn">Get Started</button>
-                          </div>
-                          <div class="slide-right animated-right">
-                            <img src="./img/new/slider3.png">
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-
-                  <!-- ✅ SLIDE 4 - Affordable Pricing -->
-                  <div class="owl-item">
-                    <a href="enquire.html">
-                      <div class="single-hero-slide gradient-slide">
-                        <div class="slide-wrapper">
-                          <div class="slide-left animated-left">
-                            <h2 class="typing">Affordable Pricing</h2>
-                            <p>No hidden charges — transparent & budget-friendly.</p>
-                            <button class="slide-btn">Contact Us</button>
-                          </div>
-
-                          <!-- ✅ NEW IMAGE (Indian Rupee ₹ sign) -->
-                          <div class="slide-right animated-right">
-                            <img src="./img/new/slider4.png" alt="Rupee Icon">
-                          </div>
-
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
+            </a>
           </div>
+
+          <div>
+            <a href="enquire.html">
+              <div class="single-hero-slide gradient-slide">
+                <div class="slide-wrapper">
+                  <div class="slide-left">
+                    <h2 class="typing">Verified Professionals</h2>
+                    <p>Handled by certified experts ensuring accuracy.</p>
+                    <button class="slide-btn">Explore Services</button>
+                  </div>
+                  <div class="slide-right">
+                    <img src="./img/new/slider2.png" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="enquire.html">
+              <div class="single-hero-slide gradient-slide">
+                <div class="slide-wrapper">
+                  <div class="slide-left">
+                    <h2 class="typing">Quick Turnaround</h2>
+                    <p>Save time — we process your requests faster.</p>
+                    <button class="slide-btn">Get Started</button>
+                  </div>
+                  <div class="slide-right">
+                    <img src="./img/new/slider3.png" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="enquire.html">
+              <div class="single-hero-slide gradient-slide">
+                <div class="slide-wrapper">
+                  <div class="slide-left">
+                    <h2 class="typing">Affordable Pricing</h2>
+                    <p>No hidden charges — transparent & budget-friendly.</p>
+                    <button class="slide-btn">Contact Us</button>
+                  </div>
+                  <div class="slide-right">
+                    <img src="./img/new/slider4.png" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
+
       </div>
-      <!-- ✅ HERO SLIDER END -->
+    </div>
 
-      <!-- ✅ CSS SECTION -->
-      <style>
-        /* Default (Desktop) */
-        /* ✅ Desktop Height (Reduced) */
+    <!-- ✅Hero Slide CSS SECTION Start -->
+    <style>
+      /* 1) Kill all top margins so slider sits right under the marquee */
+      .hero-wrapper {
+        margin-top: 0 !important;
+      }
+
+      .hero-slides {
+        margin-top: 0 !important;
+      }
+
+      /* 2) Allow slides to span the full width like the marquee */
+      .single-hero-slide {
+        max-width: 100vw !important;
+        /* override the 1240px cap */
+      }
+
+      /* 3) Make mobile slides full-width (instead of the fixed 340px card) */
+      @media (max-width: 767.98px) {
+        .hero-slides.mob-view .single-hero-slide {
+          width: 100vw !important;
+          overflow: hidden !important;
+        }
+      }
+
+
+      .single-hero-slide {
+        width: 100% !important;
+        height: 380px !important;
+        display: flex;
+        align-items: center;
+      }
+
+      /* ✅ Gradient slide */
+      .gradient-slide {
+        background: linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-align: center;
+        /* padding: 40px; */
+      }
+
+      .gradient-slide .slide-content {
+        max-width: 650px;
+      }
+
+      .gradient-slide h2 {
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .gradient-slide p {
+        font-size: 1.2rem;
+        opacity: .9;
+        margin-bottom: 20px;
+      }
+
+      .slide-btn {
+        padding: 10px 28px;
+        border-radius: 30px;
+        background: #ffffff;
+        color: #c62052;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+
+      .slide-btn:hover {
+        transform: translateY(-3px);
+        background: #ffd24d;
+        color: black;
+      }
+
+      /* Mobile & Tablet */
+      @media (max-width: 767.98px) {
+        .lab-view {
+          display: none !important;
+        }
+
+        .mob-view {
+          display: block !important;
+        }
+
         .single-hero-slide {
-          width: 100%;
-          height: 380px !important;
-          /* UPDATED HEIGHT */
-          border-radius: 10px;
-          display: flex;
-          align-items: center;
+          width: 100vw !important;
+          height: 200px !important;
+          /* border-radius: 15px; */
+          aspect-ratio: 16/9;
         }
 
-        /* ✅ Mobile Height */
-        /* @media (max-width: 767px) {
-          .single-hero-slide {
-            height: 230px !important;
-            /* Smaller height for mobile */
-        /* }
-        } */
-        */
-
-        /* ✅ Gradient slide */
         .gradient-slide {
-          background: linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #ffffff;
-          text-align: center;
-          padding: 40px;
-        }
-
-        .gradient-slide .slide-content {
-          max-width: 650px;
+          padding: 20px;
         }
 
         .gradient-slide h2 {
-          font-size: 2.6rem;
-          font-weight: 700;
-          margin-bottom: 10px;
+          font-size: 1.4rem;
         }
 
         .gradient-slide p {
-          font-size: 1.2rem;
-          opacity: .9;
-          margin-bottom: 20px;
+          font-size: 0.9rem;
         }
 
         .slide-btn {
-          padding: 10px 28px;
-          border-radius: 30px;
-          background: #ffffff;
-          color: #c62052;
-          font-weight: 700;
-          border: none;
-          cursor: pointer;
-          transition: 0.3s ease-in-out;
+          padding: 8px 18px;
+          font-size: 0.85rem;
         }
+      }
 
-        .slide-btn:hover {
-          transform: translateY(-3px);
-          background: #ffd24d;
-          color: black;
+      /* Desktop */
+      @media (min-width: 768px) {
+        .mob-view {
+          display: none !important;
         }
+      }
 
-        /* Mobile & Tablet */
-        @media (max-width: 767.98px) {
-          .lab-view {
-            display: none !important;
-          }
+      /* Underline Title */
+      .hero-title {
+        position: relative;
+      }
 
-          .mob-view {
-            display: block !important;
-          }
+      .hero-title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 25%;
+        height: 3px;
+        border-radius: 3px;
+        background: linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%);
+      }
 
-          .single-hero-slide {
-            width: 315px;
-            height: 200px !important;
-            border-radius: 15px;
-            aspect-ratio: 16/9;
-          }
-
-          .gradient-slide {
-            padding: 20px;
-          }
-
-          .gradient-slide h2 {
-            font-size: 1.4rem;
-          }
-
-          .gradient-slide p {
-            font-size: 0.9rem;
-          }
-
-          .slide-btn {
-            padding: 8px 18px;
-            font-size: 0.85rem;
-          }
-        }
-
-        /* Desktop */
-        @media (min-width: 768px) {
-          .mob-view {
-            display: none !important;
-          }
-        }
-
-        /* Underline Title */
-        .hero-title {
-          position: relative;
-        }
-
+      @media (max-width: 767.98px) {
         .hero-title::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -10px;
-          width: 25%;
-          height: 3px;
-          border-radius: 3px;
-          background: linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%);
+          width: 80%;
+
+        }
+      }
+
+      /* ✅ slide wrapper = text left + image right */
+      .slide-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      /* ✅ text left */
+      .slide-left {
+        text-align: left;
+      }
+
+      /* ✅ image right */
+      .slide-right img {
+        width: 260px !important;
+        max-width: 100%;
+        height: auto !important;
+        object-fit: contain;
+        transition: transform 0.4s ease-out;
+      }
+
+      /* ✅ animations */
+      .animated-left {
+        opacity: 0;
+        transform: translateX(-60px);
+        animation: fadeLeft 1.2s ease forwards;
+      }
+
+      .animated-right {
+        opacity: 0;
+        transform: translateX(60px);
+        animation: fadeRight 1.2s ease forwards;
+      }
+
+      @keyframes fadeLeft {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeRight {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes bounce {
+
+        0%,
+        100% {
+          transform: translateY(0);
         }
 
-         @media (max-width: 767.98px) {
-          .hero-title::after {
-            width: 80%;
-            
-          }
+        50% {
+          transform: translateY(-10px);
         }
-        /* ✅ slide wrapper = text left + image right */
+      }
+
+      /* ✅ mobile responsive */
+      @media (max-width: 768px) {
         .slide-wrapper {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
+          flex-direction: column;
+          text-align: center;
         }
 
-        /* ✅ text left */
-        .slide-left {
-          text-align: left;
-        }
-
-        /* ✅ image right */
         .slide-right img {
-          width: 260px !important;
+          width: 180px;
+          margin-top: 10px;
+        }
+      }
+
+      /* ✅ Make slider full width like marquee */
+      .hero-wrapper .container-fluid {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      /* ✅ Fix slide content width */
+      .gradient-slide {
+        width: 100%;
+        /* border-radius: 15px; */
+      }
+
+      /* ✅ Adjust image sizing */
+      .slide-right img {
+        width: 300px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      /* ✅ For laptop / large desktop */
+      @media (min-width: 1200px) {
+        .slide-right img {
+          width: 360px;
+        }
+      }
+
+      /* ✅ Mobile responsiveness */
+      @media (max-width: 768px) {
+        .slide-right img {
+          width: 180px;
+          margin-top: 10px;
+        }
+      }
+
+      /* ✅ When slide has text only, center align */
+      .only-text {
+        justify-content: center !important;
+      }
+
+      /* ✅ Typing animation */
+      /* ✅ FIXED TYPING ANIMATION */
+      .typing {
+        display: inline-block;
+        width: max-content;
+        /* ✅ important */
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        /* border-right: 3px solid #fff; */
+        animation: typing 2s steps(30, end) forwards, cursorBlink .8s infinite;
+      }
+
+      .typing {
+        color: #ffffff !important;
+      }
+
+
+      @keyframes typing {
+        from {
+          max-width: 0;
+        }
+
+        to {
           max-width: 100%;
+        }
+      }
+
+
+      @keyframes cursorBlink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      /* ✅ Fade-up animation */
+      .slide-left h2,
+      .slide-left p,
+      .slide-btn {
+        opacity: 0;
+        animation: fadeUp 1.2s ease-out forwards;
+      }
+
+      .slide-left p {
+        animation-delay: 0.2s;
+      }
+
+      .slide-btn {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      /* Make image always fit container — never cropped */
+      .slide-right img {
+        width: 260px;
+        height: 100%;
+        max-height: 260px;
+        object-fit: contain;
+      }
+
+      /* Tablet + mobile perfect responsive */
+      @media (max-width: 768px) {
+        .single-hero-slide {
           height: auto !important;
-          object-fit: contain;
-          transition: transform 0.4s ease-out;
+          padding: 15px;
         }
 
-        /* ✅ animations */
-        .animated-left {
-          opacity: 0;
-          transform: translateX(-60px);
-          animation: fadeLeft 1.2s ease forwards;
-        }
-
-        .animated-right {
-          opacity: 0;
-          transform: translateX(60px);
-          animation: fadeRight 1.2s ease forwards;
-        }
-
-        @keyframes fadeLeft {
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes fadeRight {
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes bounce {
-
-          0%,
-          100% {
-            transform: translateY(0);
-          }
-
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-
-        /* ✅ mobile responsive */
-        @media (max-width: 768px) {
-          .slide-wrapper {
-            flex-direction: column;
-            text-align: center;
-          }
-
-          .slide-right img {
-            width: 180px;
-            margin-top: 10px;
-          }
-        }
-
-        /* ✅ Make slider full width like marquee */
-        .hero-wrapper .container-fluid {
-          width: 100%;
-          max-width: 100%;
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-        }
-
-        /* ✅ Fix slide content width */
-        .gradient-slide {
-          width: 100%;
-          border-radius: 15px;
-        }
-
-        /* ✅ Adjust image sizing */
         .slide-right img {
-          width: 300px;
-          max-width: 100%;
+          width: 180px;
           height: auto;
-          object-fit: contain;
+          margin-top: 10px;
         }
 
-        /* ✅ For laptop / large desktop */
-        @media (min-width: 1200px) {
-          .slide-right img {
-            width: 360px;
-          }
+        .slide-left {
+          text-align: center;
         }
+      }
 
-        /* ✅ Mobile responsiveness */
-        @media (max-width: 768px) {
-          .slide-right img {
-            width: 180px;
-            margin-top: 10px;
-          }
+      /* Desktop height adjustment */
+      @media (min-width: 1000px) {
+        .single-hero-slide {
+          height: 350px !important;
         }
+      }
 
-        /* ✅ When slide has text only, center align */
-        .only-text {
-          justify-content: center !important;
-        }
+      /* ✨ PARALLAX HOVER IMAGE EFFECT */
+      .slide-right img {
+        transition: transform 0.4s ease-out;
+        will-change: transform;
+      }
 
-        /* ✅ Typing animation */
-        /* ✅ FIXED TYPING ANIMATION */
-        .typing {
-          display: inline-block;
-          width: max-content;
-          /* ✅ important */
-          max-width: 100%;
-          overflow: hidden;
-          white-space: nowrap;
-          /* border-right: 3px solid #fff; */
-          animation: typing 2s steps(30, end) forwards, cursorBlink .8s infinite;
-        }
+      /* ✨ BUTTON GLOW EFFECT */
+      .slide-btn {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
 
-        .typing {
-          color: #ffffff !important;
-        }
+      .slide-btn:hover {
+        transform: translateY(-4px);
+        background: #ffd24d !important;
+        color: #000 !important;
+        box-shadow: 0 0 12px #ffd24d, 0 0 24px rgba(255, 210, 77, 0.5);
+      }
 
+      /* Glow trail */
+      .slide-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 220%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+        transition: 0.5s;
+      }
 
-        @keyframes typing {
-          from {
-            max-width: 0;
-          }
+      .slide-btn:hover::after {
+        left: 100%;
+      }
 
-          to {
-            max-width: 100%;
-          }
-        }
-
-
-        @keyframes cursorBlink {
-          50% {
-            border-color: transparent;
-          }
-        }
-
-        /* ✅ Fade-up animation */
-        .slide-left h2,
-        .slide-left p,
-        .slide-btn {
-          opacity: 0;
-          animation: fadeUp 1.2s ease-out forwards;
-        }
-
-        .slide-left p {
-          animation-delay: 0.2s;
-        }
-
-        .slide-btn {
-          animation-delay: 0.4s;
-        }
-
-        @keyframes fadeUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateY(0px);
-          }
-        }
-
-        /* Make image always fit container — never cropped */
-        .slide-right img {
-          width: 260px;
-          height: 100%;
-          max-height: 260px;
-          object-fit: contain;
-        }
-
-        /* Tablet + mobile perfect responsive */
-        @media (max-width: 768px) {
-          .single-hero-slide {
-            height: auto !important;
-            padding: 15px;
-          }
-
-          .slide-right img {
-            width: 180px;
-            height: auto;
-            margin-top: 10px;
-          }
-
-          .slide-left {
-            text-align: center;
-          }
-        }
-
-        /* Desktop height adjustment */
-        @media (min-width: 1000px) {
-          .single-hero-slide {
-            height: 350px !important;
-          }
-        }
-
-        /* ✨ PARALLAX HOVER IMAGE EFFECT */
-        .slide-right img {
-          transition: transform 0.4s ease-out;
-          will-change: transform;
-        }
-
-        /* ✨ BUTTON GLOW EFFECT */
-        .slide-btn {
-          position: relative;
-          overflow: hidden;
-          z-index: 1;
-        }
-
-        .slide-btn:hover {
-          transform: translateY(-4px);
-          background: #ffd24d !important;
-          color: #000 !important;
-          box-shadow: 0 0 12px #ffd24d, 0 0 24px rgba(255, 210, 77, 0.5);
-        }
-
-        /* Glow trail */
-        .slide-btn::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 220%;
-          height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-          transition: 0.5s;
-        }
-
-        .slide-btn:hover::after {
-          left: 100%;
-        }
-
-        /* ================================
+      /* ================================
    HERO SLIDER – SAFE FINAL OVERRIDES
    (Place AFTER all existing rules)
    ================================ */
 
-        /* 1) Typography scales nicely across screens */
-        .gradient-slide h2 {
-          font-size: clamp(1.25rem, 2.5vw + 1rem, 2.2rem);
-        }
+      /* 1) Typography scales nicely across screens */
+      .gradient-slide h2 {
+        font-size: clamp(1.25rem, 2.5vw + 1rem, 2.2rem);
+      }
 
-        .gradient-slide p {
-          font-size: clamp(0.9rem, 1.2vw + 0.6rem, 1.15rem);
-        }
+      .gradient-slide p {
+        font-size: clamp(0.9rem, 1.2vw + 0.6rem, 1.15rem);
+      }
 
-        /* 2) Consistent slide shell (desktop default) */
-        .single-hero-slide {
-          width: 100%;
-          max-width: 1240px;
-          /* prevents overstretch on huge screens */
+      /* 2) Consistent slide shell (desktop default) */
+      .single-hero-slide {
+        width: 100%;
+        margin: 0 auto;
+        height: 360px !important;
+        display: flex;
+        align-items: center;
+      }
+
+      /* 3) Layout: text-left & image-right with safe widths */
+      .slide-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        width: 100%;
+        padding: 22px 28px;
+        box-sizing: border-box;
+      }
+
+      .slide-left {
+        flex: 1 1 52%;
+        min-width: 0;
+        text-align: left;
+      }
+
+      .slide-right {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 4) Image: one canonical rule (remove duplicates by overriding here) */
+      .slide-right img {
+        display: block;
+        width: clamp(240px, 22vw, 360px);
+        max-width: 100%;
+        height: auto !important;
+        object-fit: contain;
+        transition: transform 0.4s ease-out;
+        will-change: transform;
+      }
+
+      /* 5) Button spacing on small screens */
+      .slide-btn {
+        margin-top: 8px;
+      }
+
+      /* ✅ FINAL MOBILE VERSION — IMAGE LEFT + TEXT RIGHT + BIG IMAGE + FULL HEADING */
+      @media (max-width: 767.98px) {
+
+        /* Mobile slide container */
+        .hero-slides.mob-view .single-hero-slide {
+          width: 100vw !important;
+          height: 230px !important;
           margin: 0 auto;
-          height: 360px !important;
-          /* tidy desktop height */
+          padding: 24px 5px;
           display: flex;
           align-items: center;
-          border-radius: 15px;
-          overflow: hidden;
         }
 
-        /* 3) Layout: text-left & image-right with safe widths */
-        .slide-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 28px;
+        /* Layout: IMAGE LEFT + TEXT RIGHT */
+        .hero-slides.mob-view .slide-wrapper {
+          flex-direction: row !important;
+          justify-content: space-between !important;
+          align-items: center !important;
           width: 100%;
-          padding: 22px 28px;
-          box-sizing: border-box;
+          gap: 20px;
+          margin-left: 5px;
+          padding: 0px;
         }
 
-        .slide-left {
-          flex: 1 1 52%;
-          min-width: 0;
-          /* prevents text overflow */
-          text-align: left;
+        /* Text content */
+        .hero-slides.mob-view .slide-left {
+          flex: 1;
+          text-align: left !important;
         }
 
-        .slide-right {
-          flex: 0 0 auto;
+        .hero-slides.mob-view h2 {
+          font-size: 1.1rem !important;
+        }
+
+        .hero-slides.mob-view p {
+          font-size: 0.82rem !important;
+          margin-bottom: 4px;
+        }
+
+        /* ✅ Show full heading always */
+        .hero-slides.mob-view .typing {
+          white-space: normal !important;
+          overflow: visible !important;
+          text-overflow: unset !important;
+          display: block !important;
+        }
+
+        /* IMAGE LEFT (bigger) */
+        .hero-slides.mob-view .slide-right {
+          flex: 1;
           display: flex;
-          justify-content: center;
+          justify-content: flex-start !important;
           align-items: center;
         }
 
-        /* 4) Image: one canonical rule (remove duplicates by overriding here) */
-        .slide-right img {
-          display: block;
-          width: clamp(240px, 22vw, 360px);
-          max-width: 100%;
-          height: auto !important;
+        .hero-slides.mob-view .slide-right img {
+          width: 270px !important;
+          /* 🔥 Extra Large */
+          max-height: 185px !important;
           object-fit: contain;
-          transition: transform 0.4s ease-out;
-          will-change: transform;
         }
 
-        /* 5) Button spacing on small screens */
-        .slide-btn {
-          margin-top: 8px;
+        /* Button spacing */
+        .hero-slides.mob-view .slide-btn {
+          padding: 6px 16px !important;
+          font-size: 0.78rem !important;
+          margin-top: 6px !important;
+        }
+      }
+
+
+
+
+      /* 7) SMALLER phones (≤360px) – keep it neat without changing the “card size” intent */
+      @media (max-width: 360px) {
+        .hero-slides.mob-view .single-hero-slide {
+          transform: scale(0.94);
+          /* subtle scale so card fits tiny screens */
+          transform-origin: top center;
+        }
+      }
+
+      /* 8) TABLET RANGE – slightly taller to breathe */
+      @media (min-width: 768px) and (max-width: 1199.98px) {
+        .single-hero-slide {
+          height: 320px !important;
         }
 
-        /* ✅ FINAL MOBILE VERSION — IMAGE LEFT + TEXT RIGHT + BIG IMAGE + FULL HEADING */
-        @media (max-width: 767.98px) {
-
-          /* Mobile slide container */
-          .hero-slides.mob-view .single-hero-slide {
-            width: 340px !important;
-            height: 230px !important;
-            margin: 0 auto;
-            padding: 24px 5px;
-            display: flex;
-            align-items: center;
-          }
-
-          /* Layout: IMAGE LEFT + TEXT RIGHT */
-          .hero-slides.mob-view .slide-wrapper {
-            flex-direction: row !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            width: 100%;
-            gap: 12px;
-            margin-left: 5px;
-            padding: 0px;
-          }
-
-          /* Text content */
-          .hero-slides.mob-view .slide-left {
-            flex: 1;
-            text-align: left !important;
-          }
-
-          .hero-slides.mob-view h2 {
-            font-size: 1.1rem !important;
-          }
-
-          .hero-slides.mob-view p {
-            font-size: 0.82rem !important;
-            margin-bottom: 4px;
-          }
-
-          /* ✅ Show full heading always */
-          .hero-slides.mob-view .typing {
-            white-space: normal !important;
-            overflow: visible !important;
-            text-overflow: unset !important;
-            display: block !important;
-          }
-
-          /* IMAGE LEFT (bigger) */
-          .hero-slides.mob-view .slide-right {
-            flex: 1;
-            display: flex;
-            justify-content: flex-start !important;
-            align-items: center;
-          }
-
-          .hero-slides.mob-view .slide-right img {
-            width: 270px !important;
-            /* 🔥 Extra Large */
-            max-height: 185px !important;
-            object-fit: contain;
-          }
-
-          /* Button spacing */
-          .hero-slides.mob-view .slide-btn {
-            padding: 6px 16px !important;
-            font-size: 0.78rem !important;
-            margin-top: 6px !important;
-          }
+        .slide-right img {
+          width: clamp(220px, 28vw, 320px);
         }
+      }
 
-
-
-
-        /* 7) SMALLER phones (≤360px) – keep it neat without changing the “card size” intent */
-        @media (max-width: 360px) {
-          .hero-slides.mob-view .single-hero-slide {
-            transform: scale(0.94);
-            /* subtle scale so card fits tiny screens */
-            transform-origin: top center;
-          }
+      /* 9) Desktop hover motion only (no jumpiness on touch) */
+      @media (hover: hover) and (pointer: fine) {
+        .slide-right img:hover {
+          transform: translateY(-4px);
         }
+      }
 
-        /* 8) TABLET RANGE – slightly taller to breathe */
-        @media (min-width: 768px) and (max-width: 1199.98px) {
-          .single-hero-slide {
-            height: 320px !important;
-          }
+      /* 10) Owl wrappers hardening (safe if Owl isn’t re-initializing) */
+      .owl-stage-outer,
+      .owl-stage,
+      .owl-item {
+        width: 100%;
+      }
 
-          .slide-right img {
-            width: clamp(220px, 28vw, 320px);
-          }
-        }
+      .owl-item>a,
+      .owl-item>div {
+        display: block;
+        width: 100%;
+      }
 
-        /* 9) Desktop hover motion only (no jumpiness on touch) */
-        @media (hover: hover) and (pointer: fine) {
-          .slide-right img:hover {
-            transform: translateY(-4px);
-          }
-        }
+      /* 11) Make the gradient background responsive and padded nicely */
+      .gradient-slide {
+        background: linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
 
-        /* 10) Owl wrappers hardening (safe if Owl isn’t re-initializing) */
-        .owl-stage-outer,
-        .owl-stage,
-        .owl-item {
-          width: 100%;
-        }
+      /* 12) Keep typing effect from clipping on narrow cards */
+      .typing {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* prevents wrapping glitches */
+        border-right: 0;
+        /* you already commented the cursor border */
+      }
 
-        .owl-item>a,
-        .owl-item>div {
-          display: block;
-          width: 100%;
-        }
+      /* ✅ DESKTOP ONLY ENHANCEMENTS (DO NOT AFFECT MOBILE) */
+@media (min-width: 992px) {
 
-        /* 11) Make the gradient background responsive and padded nicely */
-        .gradient-slide {
-          background: linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%);
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-        }
+  /* Bigger slide text */
+  .slide-left h2 {
+    font-size: 3.2rem !important;      /* Previously around ~2.2rem */
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
 
-        /* 12) Keep typing effect from clipping on narrow cards */
-        .typing {
-          max-width: 100%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          /* prevents wrapping glitches */
-          border-right: 0;
-          /* you already commented the cursor border */
-        }
-      </style>
+  .slide-left p {
+    font-size: 1.35rem !important;      /* Previously ~1rem */
+    font-weight: 500;
+    opacity: 0.95;
+    margin-bottom: 14px;
+  }
+
+  /* Bigger CTA button */
+  .slide-btn {
+    padding: 12px 36px !important;
+    font-size: 1.05rem !important;
+    border-radius: 40px;
+  }
+
+  /* Make the right side image/logo bigger */
+  .slide-right img {
+    width: 400px !important;          /* Previously ~300-360px */
+    max-width: 100%;
+    height: auto !important;
+    object-fit: contain;
+    transition: transform .35s ease;
+  }
+
+  /* Hover pop animation */
+  .slide-right img:hover {
+    transform: scale(1.07);
+  }
+
+  /* Better spacing and alignment */
+  .slide-wrapper {
+    padding: 30px 60px !important;
+    gap: 50px !important;
+  }
+}
+
+    </style>
+    <!-- ✅Hero Slide CSS SECTION End -->
 
 
+
+    <div class="container">
 
       <!-- Product Categories list -->
-      <div class="text-center mt-5">
-        <h4 class="category-title " style="font-size: 1.3rem;">Find the Right Service for You</h4>
+      <div class="text-center ">
+        <h4 class="category-title " style="font-size: 1.8rem;">Find the Right Service for You</h4>
       </div>
       <div class="row g-2 rtl-flex-d-row-r">
         <div class="col-4">
@@ -1564,23 +1350,6 @@
           }
         }
 
-        /* @media (max-width: 575px) {
-          .row.g-2>.col-4 {
-            flex: 0 0 50%;
-            max-width: 50%;
-          }
-
-          .catagory-card img {
-            width: 50px;
-            height: 50px;
-            padding: 14px;
-          }
-
-          .catagory-card span {
-            font-size: 0.9rem;
-          }
-        } */
-
         /* 🔹 Mobile: 4 cards per row & keep icon outline */
         @media (max-width: 575px) {
           .row.g-2>.col-4 {
@@ -1606,7 +1375,7 @@
         .category-title {
           text-align: center;
           font-weight: 700;
-          font-size: 1.8rem;
+          font-size: 1.8rem !important;
           color: #222;
           margin-top: 30px;
           margin-bottom: 20px;
@@ -1743,32 +1512,11 @@
         <!--  Desktop Why Choose Us? Card -->
         <div class="row">
           <style>
-            /* .why-box {
-              padding: 30px 20px;
-              text-align: center;
-              height: auto;
-              min-height: 350px;
-              background: #ffffff;
-              border-radius: 20px;
-              box-shadow: 0 4px 15px rgba(255, 0, 0, 0.1);
-              transition: all 0.4s ease;
-              position: relative;
-              overflow: hidden;
-              animation: fadeInUp 0.8s ease forwards;
-            } */
-
             .why-box {
               padding: 30px 20px;
               text-align: center;
               height: auto;
               min-height: 350px;
-
-              /* ✅ Gradient Border */
-              /* background:
-                linear-gradient(#ffffff, #ffffff) padding-box,
-                linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%) border-box;
-              border: 4px solid transparent; */
-
               border-radius: 15px;
               box-shadow: 0 4px 15px rgba(255, 0, 0, 0.1);
               transition: all 0.4s ease;
@@ -1776,22 +1524,11 @@
               overflow: hidden;
               animation: fadeInUp 0.8s ease forwards;
             }
-
-            /* .why-box:hover {
-              transform: translateY(-10px);
-              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            } */
-
             .why-box img {
               margin: auto;
               width: 90px !important;
               transition: transform 0.4s ease;
             }
-
-            /* .why-box:hover img {
-              transform: scale(1.1);
-            } */
-
             .why-box h4 {
               margin-top: 25px;
               font-size: 1.2rem;
@@ -1883,7 +1620,7 @@
             }
           </style>
 
-          <div class="pb-3 mt-4 mb-5">
+          <div class="pb-3 mt-4 ">
             <div class="container position-relative">
 
               <div class="why-slider owl-carousel">
@@ -2003,13 +1740,6 @@
           border-radius: 22px;
           box-shadow: 0 4px 18px 0 #ed9696;
           padding: 36px 18px 36px 18px;
-
-          /* ✅ Gradient Border */
-          /* background:
-            linear-gradient(#ffffff, #ffffff) padding-box,
-            linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%) border-box;
-          border: 2px solid transparent; */
-
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -2017,16 +1747,6 @@
           justify-content: flex-start;
           text-align: center;
         }
-
-
-        /* .why-box:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-          /* background: linear-gradient(145deg, #ffeaed, #e97d7d); */
-        /* soft blue-white gradient */
-        /* } */
-
-
         .why-slider .why-box img {
           width: 76px;
           margin-bottom: 18px;
@@ -2050,13 +1770,6 @@
           box-sizing: border-box;
           border-radius: 30px;
           padding: 36px 12px;
-
-          /* ✅ Gradient Border */
-          /* background:
-            linear-gradient(#ffffff) padding-box,
-            linear-gradient(64.89deg, #c62052 9.33%, #280071 83.6%) border-box;
-          border: 2px solid transparent; */
-
           box-shadow: 0 4px 32px 4px #efe4b5;
           display: flex;
           flex-direction: column;
@@ -2118,8 +1831,8 @@
 
 
     <!--How it Works  -->
-    <div class="mb-4 how-it-works" aria-label="How it works">
-      <h4 class="text-center mb-3 section-title">How it Works</h4>
+    <div class="how-it-works" aria-label="How it works">
+      <h4 class="text-center mb-4 section-title" style="font-size: 1.8rem;">How it Works</h4>
 
       <div class="row m-auto justify-content-center steps-row">
 
@@ -2196,12 +1909,12 @@
     <!--How it Works CSS -->
     <style>
       /* --- Base Wrapper --- */
-      .how-it-works {
-        padding: 2.5rem 1rem;
-        border-radius: 18px;
-        max-width: 1200px;
-        margin: 0 auto 2rem;
-      }
+      /* .how-it-works { */
+        /* padding: 2.5rem 1rem; */
+        /* border-radius: 18px;
+        max-width: 1200px; */
+        /* margin: 0 auto 2rem; */
+      /* } */
 
       /* --- Section Title --- */
       .section-title {
@@ -2210,6 +1923,7 @@
         letter-spacing: -0.02em;
         color: #000000;
         position: relative;
+     
       }
 
       /* .section-title::after {
@@ -3124,14 +2838,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    /* 🌐 Footer Styling */
-    /* .footer {
-      background: linear-gradient(135deg, #f85562, #ea6955);
-      color: #fff;
-      padding: 60px 20px 20px;
-      font-family: "Poppins", sans-serif;
-    } */
-
     .footer {
       border-top: 2px solid #777676;
       /* background: linear-gradient(270deg, #b22382, #1458cf, #b22382); */
@@ -3310,13 +3016,6 @@
     }
   </style>
 
-
-
-
-
-
-
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTFL31GZ6S"></script>
   <script>
@@ -3332,7 +3031,7 @@
 
 
 
-  <a href="enquire.html"><button class="enquire">Enquire Now</button></a>
+  <!-- <a href="enquire.html"><button class="enquire">Enquire Now</button></a>
   <style>
     .enquire {
       z-index: 99999999999999999999999999999999999999999999999999999999999999999999;
@@ -3371,7 +3070,7 @@
         background-position: 0% 50%;
       }
     }
-  </style>
+  </style> -->
 
 
 
@@ -3917,7 +3616,7 @@
   }
 </style>
 
-<script>
+<!-- <script>
   $(".hero-slides").on("changed.owl.carousel", function () {
     document.querySelectorAll(".typing").forEach(el => {
       el.style.animation = "none";
@@ -3925,7 +3624,7 @@
       el.style.animation = null;
     });
   });
-</script>
+</script> -->
 
 
 <script>

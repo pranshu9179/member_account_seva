@@ -350,135 +350,170 @@
 
 
 
-  <div class="head-bg-img col-lg-12 d-flex mt-5  align-items-center"
-    style="background-image: url('img/bg-img.html'); background-size: cover; background-position: right; width: 100%; height: 35vh; ">
-    <h1 class="px-5" style="font-weight: 700; color: aliceblue;">About Us</h1>
+<!-- ✅ TOP BANNER / HEADER SECTION -->
+<!-- <div class="head-bg-img col-lg-12 d-flex justify-content-center align-items-center"
+  style="background-image: url('img/bg-img.html');">
+  <h1 class="page-title">About Us</h1>
+</div> -->
 
-    <style>
-      @media (max-width: 767px) {
+<style>
+  /* ---------- General Banner Styling ---------- */
+  .head-bg-img {
+    width: 100%;
+    height: 35vh;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
 
-        /* CSS */
-        .head-bg-img {
-          height: 15vh !important;
-        }
+  /* ✅ Overlay for better readability */
+  .head-bg-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.60), rgba(229, 5, 5, 0.2)); */
+    z-index: 1;
+  }
 
-      }
-    </style>
-  </div>
-  <div class="page-content-wrapper py-3" style="margin-top: -0.1vmax;">
- 
-     <div class="container mt-5">
-      <div class="card">
-        <div class="card-body">
-          <div class=" row d-flex  align-items-sm-center justify-content-center about-content-wrap dir-rtl">
-            <div class="col-lg-6 col-12 m-auto ">
-              <h1>Our values</h1>
-              <!-- <p>
-                Our vision is to bring a positive change in the lives of many skilled technician and make them true
-                professionals and give a better life to their families.
-              </p> -->
-            </div>
-            <div class="col-lg-5 mt-lg-0 mt-5 col-12 d-flex align-items-center justify-content-center">
-              <img class="mb-3" src="img/value.html" alt="" width="90%">
-            </div>
+  .head-bg-img h1 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-title {
+    font-weight: 700;
+    color: #5c5c5c;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 767px) {
+    .head-bg-img {
+      height: 20vh !important;
+    }
+
+    .page-title {
+      font-size: 1.8rem;
+    }
+  }
+
+
+  /* ---------- About Section ---------- */
+  .about-content-wrap h1 {
+    font-weight: 700;
+  }
+
+  .card {
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px;
+    border-radius: 12px;
+  }
+
+
+  /* ---------- Product Card / Promise Cards ---------- */
+  .featured-product-card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 14px !important;
+  }
+
+  .featured-product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 22px;
+  }
+
+  .featured-product-card img {
+    transition: 0.4s ease-in-out;
+    padding: 8px;
+  }
+
+  .featured-product-card:hover img {
+    transform: scale(1.08);
+  }
+
+  .product-description {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #040404;
+    font-size: 0.95rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 576px) {
+    .product-description {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+
+
+
+
+<!-- ✅ PAGE CONTENT -->
+<div class="page-content-wrapper py-3" style="margin-top: 3vmax;">
+
+  <!-- <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <div class=" row d-flex align-items-sm-center justify-content-center about-content-wrap dir-rtl">
+          <div class="col-lg-6 col-12 m-auto">
+            <h1>Our values</h1>
           </div>
-        </div>
-      </div>
-
-    </div>
-
-  <div class="mb-4 mt-4">
-    <h4 class="text-center mb-3">Our Promise To Customers</h4>
-    <div class="row  m-auto justify-content-center">
-      <!-- Featured Product Card-->
-      <div class="col-6 col-lg-2 mt-2 mb-2">
-        <div class="card featured-product-card">
-          <div class="card-body">
-            <div class="product-thumbnail-side">
-              <!-- Thumbnail -->
-              <a class="product-thumbnail d-block" href="enquire-2.html"><img
-                  src="img/Choose%20img/aboutimg%20(4).html"
-                  width="100px" alt=""></a>
-            </div>
-            <div class="product-description text-center">
-              <p>Transparent <br/> Documentation</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Featured Product Card-->
-      <div class="col-6 col-lg-2 mt-2 mb-2">
-        <div class="card featured-product-card">
-          <div class="card-body">
-            <div class="product-thumbnail-side">
-              <!-- Thumbnail -->
-              <a class="product-thumbnail d-block" href="enquire-2.html"><img
-                  src="img/Choose%20img/aboutimg%20(3).html"
-                  width="100px" alt=""></a>
-            </div>
-            <div class="product-description text-center">
-              <p>Quality <br/> Checks</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Featured Product Card-->
-      <div class="col-6 col-lg-2 mt-2 mb-2">
-        <div class="card featured-product-card">
-          <div class="card-body">
-            <div class="product-thumbnail-side">
-              <!-- Thumbnail -->
-              <a class="product-thumbnail d-block" href="enquire-2.html"><img
-                  src="img/Choose%20img/aboutimg%20(1).html"
-                  width="100px" alt=""></a>
-            </div>
-            <div class="product-description text-center">
-              <p>Full Visibility of <br/> the entire project</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Featured Product Card-->
-      <div class="col-6 col-lg-2 mt-2 mb-2">
-        <div class="card featured-product-card">
-          <div class="card-body">
-            <div class="product-thumbnail-side">
-              <!-- Thumbnail -->
-              <a class="product-thumbnail d-block" href="enquire-2.html"><img
-                  src="img/Choose%20img/aboutimg%20(5).html"
-                  width="100px"  alt=""></a>
-            </div>
-            <div class="product-description text-center">
-              <p>Value for <br/> money</p>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-lg-2 mt-2 mb-2">
-        <div class="card featured-product-card">
-          <div class="card-body">
-            <div class="product-thumbnail-side">
-              <!-- Thumbnail -->
-              <a class="product-thumbnail d-block" href="enquire-2.html"><img
-                  src="img/Choose%20img/aboutimg.html"
-                  width="100px" alt=""></a>
-            </div>
-            <div class="product-description text-center">
-              <p>Flexible Payment  <br/> Structure
+          <div class="col-lg-5 col-12 mt-lg-0 mt-4 text-center">
+            <img class="mb-3 img-fluid" src="img/value.html" alt="Values">
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
+  <!-- ✅ OUR PROMISE SECTION -->
+  <div class="mb-5 mt-5">
+    <h4 class="text-center fw-bold" style="font-size: 2rem;">Our Promise To Customers</h4>
+
+    <div class="row m-auto justify-content-center mt-4">
+
+      <!-- Card -->
+      <div class="col-6 col-md-4 col-lg-2 mt-3 mb-2">
+        <div class="card featured-product-card text-center p-2">
+          <img src="img/Choose%20img/aboutimg%20(4).html" width="100px" alt="">
+          <p class="product-description">Transparent <br> Documentation</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 mt-3 mb-2">
+        <div class="card featured-product-card text-center p-2">
+          <img src="img/Choose%20img/aboutimg%20(3).html" width="100px" alt="">
+          <p class="product-description">Quality <br> Checks</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 mt-3 mb-2">
+        <div class="card featured-product-card text-center p-2">
+          <img src="img/Choose%20img/aboutimg%20(1).html" width="100px" alt="">
+          <p class="product-description">Full Visibility of <br> the entire project</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 mt-3 mb-2">
+        <div class="card featured-product-card text-center p-2">
+          <img src="img/Choose%20img/aboutimg%20(5).html" width="100px" alt="">
+          <p class="product-description">Value for <br> money</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 mt-3 mb-2">
+        <div class="card featured-product-card text-center p-2">
+          <img src="img/Choose%20img/aboutimg.html" width="100px" alt="">
+          <p class="product-description">Flexible Payment <br> Structure</p>
+        </div>
+      </div>
+
+    </div>
   </div>
+</div>
+
 
 
 
@@ -496,7 +531,7 @@
 
 
 
-<a href="enquire-2.html"><button class="enquire">Enquire Now</button></a>
+<!-- <a href="enquire-2.html"><button class="enquire">Enquire Now</button></a>
 <style>
   .enquire {
     z-index: 99999999999999999999999999999999999999999999999999999999999999999999;
@@ -518,7 +553,7 @@
     font-size: 1.1rem;
     cursor: pointer;
   }
-</style>
+</style> -->
 
 
 
@@ -605,7 +640,7 @@
   }
 
   .footer-logo a {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 10px;
     padding: 20px;
   }
@@ -764,233 +799,457 @@
 
 
 
-<footer class="footer-section laptop-view-footer">
-  <div class="container">
-    <div class="footer-content pt-5 pb-1">
-      
-
-  <div class="copyright-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-3 col-lg-3 text-center text-lg-left">
-          <div class="copyright-text">
-            <!--<p align="left">	&#169;2021-2023   Pritan Solution Private Limited</p>-->
-          </div>
-        </div>
-        <div class="col-xl-9 col-lg-9 d-none d-lg-block text-left">
-          <div class="footer-menu">
-            <ul>
-              <li><a href="index-3.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-         
-               <!--<li><a href="career.php">Career</a></li>-->
-               <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-          </div>
-        </div>
-
+ 
+  <!-- 🌐 FOOTER SECTION -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo & Intro -->
+      <div class="footer-logo">
+        <a href="home.html">
+          <img src="./img//new/Account-Seva-main-logo.png" width="35%">
+        </a>
+        <p>Your trusted partner for financial and business solutions. We deliver excellence, innovation, and value to
+          our clients.</p>
       </div>
-       <hr>
-    </div>
-   
-  </div>
-</footer>
 
-<style>
-  . @media(max-width: 767px) {
-    footer {
-      display: none;
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><i class="fa-solid fa-circle-info"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-user-plus"></i> <a href="reg.html">Register with Us</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="contact.html">Contact Us</a></li>
+          <li><i class="fa-solid fa-bullhorn"></i> <a href="#">Follow Us</a></li>
+          <li><i class="fa-solid fa-toggle-on"></i> <a href="#">Associates Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="footer-social">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>© 2025 All Tax. All Rights Reserved | Developed by <strong>@ Codepact</strong></p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    .footer {
+      border-top: 2px solid #777676;
+      background-color: #c2cffb;
+      color: #000000;
+      padding: 60px 20px 20px;
+      font-family: "Poppins", sans-serif;
     }
 
-  }
+    @keyframes moveGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
 
-  .footer-section {
-    background: #1a1919;
-    position: relative;
-  }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
 
-  .footer-cta {
-    border-bottom: 1px solid #373636;
-  }
+    .footer-logo {
+      flex: 1 1 300px;
+    }
 
-  .single-cta i {
-    color: #ea4c62;
-    font-size: 30px;
-    float: left;
-    margin-top: 8px;
-  }
+    .footer-logo img {
+      width: 160px;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo p {
+      font-size: 0.95rem;
+      color: #000000;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      flex: 1 1 200px;
+    }
+
+    .footer-links h5,
+    .footer-social h5 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .footer-links h5::after,
+    .footer-social h5::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 3px;
+      background: #bd00e7;
+      left: 0;
+      bottom: -5px;
+      border-radius: 2px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links ul li {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .footer-links ul li i {
+      color: #000000;
+      font-size: 1rem;
+    }
+
+    .footer-links ul li a {
+      color: #000000;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links ul li a:hover {
+      color: #9e0066;
+    }
+
+    .footer-social {
+      flex: 1 1 200px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #000000;
+      font-size: 1.2rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #ffffff;
+      color: #9e0066;
+      border-color: #b700ff;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #777676;
+    }
+
+    .footer-bottom p {
+      font-size: 0.9rem;
+      color: #000000;
+    }
+
+    .footer-bottom strong {
+      color: #f905bc;
+    }
+
+
+    /* 🌐 Responsive */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-links ul li {
+        justify-content: center;
+      }
+
+      .footer-links h5::after,
+      .footer-social h5::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .footer-logo img {
+        margin: auto;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+  
+  <style>
+    .float1 {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 60px;
+      right: 15px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 450;
+    }
+
+    .footer-widget ul li {
+      width: 33% !important;
+    }
+
+    .my-float1 {
+      margin-top: 16px;
+    }
+
+    @media (max-width: 767px) {
+      .laptop-view-footer {
+        display: none;
+      }
+
+    }
+  </style>
+
+  <style>
+    @media(max-width: 767px) {
+      footer {
+        display: none;
+      }
+
+    }
+
+
+    .footer-section {
+      background: #1a1919;
+      position: relative;
+    }
+
+    .footer-cta {
+      border-bottom: 1px solid #373636;
+    }
+
+    .single-cta i {
+      color: #ea4c62;
+      font-size: 30px;
+      float: left;
+      margin-top: 8px;
+    }
 
 
 
-  .footer-content {
-    position: relative;
-    z-index: 2;
-  }
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
 
-  .footer-pattern img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 330px;
-    background-size: cover;
-    background-position: 100% 100%;
-  }
+    .footer-pattern img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 330px;
+      background-size: cover;
+      background-position: 100% 100%;
+    }
 
-  .footer-logo {
-    margin-bottom: 30px;
-  }
+    .footer-logo {
+      margin-bottom: 30px;
+    }
 
-  .footer-logo a {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-  }
+    .footer-logo a {
+      /* background-color: #ffffff; */
+      border-radius: 10px;
+      padding: 20px;
+    }
 
-  .footer-logo img {
-    /* padding: 20px; */
-    max-width: 200px;
-  }
+    .footer-logo img {
+      /* padding: 20px; */
+      max-width: 200px;
+    }
 
-  .footer-text p {
-    margin-bottom: 14px;
-    font-size: 14px;
-    color: #ffffff;
-    line-height: 28px;
-  }
+    .footer-text p {
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 28px;
+    }
 
-  .footer-social-icon span {
-    color: #fff;
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
-  }
+    .footer-social-icon span {
+      color: #fff;
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 20px;
+    }
 
-  .footer-social-icon a {
-    color: #fff;
-    font-size: 16px;
-    margin-right: 15px;
-  }
+    .footer-social-icon a {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 15px;
+    }
 
-  .footer-social-icon i {
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    line-height: 38px;
-    border-radius: 50%;
-  }
+    .footer-social-icon i {
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 38px;
+      border-radius: 50%;
+    }
 
-  .facebook-bg {
-    background: #3B5998;
-  }
+    .facebook-bg {
+      background: #3B5998;
+    }
 
-  .twitter-bg {
-    background: #55ACEE;
-  }
+    .twitter-bg {
+      background: #55ACEE;
+    }
 
-  .google-bg {
-    background: #DD4B39;
-  }
+    .google-bg {
+      background: #DD4B39;
+    }
 
-  .footer-widget-heading h3 {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 40px;
-    position: relative;
-  }
+    .footer-widget-heading h3 {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      position: relative;
+    }
 
-  .footer-widget-heading h3::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -15px;
-    height: 2px;
-    width: 50px;
-    background: #ea4c62;
-  }
+    .footer-widget-heading h3::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      height: 2px;
+      width: 50px;
+      background: #ea4c62;
+    }
 
-  .footer-widget ul li {
-    display: inline-block;
-    float: left;
-    width: 50%;
-    margin-bottom: 12px;
-  }
+    .footer-widget ul li {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      margin-bottom: 12px;
+    }
 
-  .footer-widget ul li a:hover {
-    color: #ea4c62;
-  }
+    .footer-widget ul li a:hover {
+      color: #ea4c62;
+    }
 
-  .footer-widget ul li a {
-    color: #ffffff;
-    text-transform: capitalize;
-  }
+    .footer-widget ul li a {
+      color: #ffffff;
+      text-transform: capitalize;
+    }
 
-  .subscribe-form {
-    position: relative;
-    overflow: hidden;
-  }
+    .subscribe-form {
+      position: relative;
+      overflow: hidden;
+    }
 
-  .subscribe-form input {
-    width: 100%;
-    padding: 14px 28px;
-    background: #7272722e;
-    border: 1px solid #2E2E2E;
-    color: #fff;
-  }
+    .subscribe-form input {
+      width: 100%;
+      padding: 14px 28px;
+      background: #7272722e;
+      border: 1px solid #2E2E2E;
+      color: #fff;
+    }
 
-  .subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: #ea4c62;
-    padding: 13px 20px;
-    border: 1px solid #ea4c62;
-    top: 0;
-  }
+    .subscribe-form button {
+      position: absolute;
+      right: 0;
+      background: #ea4c62;
+      padding: 13px 20px;
+      border: 1px solid #ea4c62;
+      top: 0;
+    }
 
-  .subscribe-form button i {
-    color: #fff;
-    font-size: 22px;
-    transform: rotate(-6deg);
-  }
+    .subscribe-form button i {
+      color: #fff;
+      font-size: 22px;
+      transform: rotate(-6deg);
+    }
 
-  .copyright-area {
-    background: #1a1919;
-    padding: 25px 0;
-  }
+    .copyright-area {
+      background: #1a1919;
+      padding: 25px 0;
+    }
 
-  .copyright-text p {
-    margin: 0;
-    font-size: 14px;
-    color: #ffffff;
-  }
+    .copyright-text p {
+      margin: 0;
+      font-size: 14px;
+      color: #ffffff;
+    }
 
-  .copyright-text p a {
-    color: #ea4c62;
-  }
+    .copyright-text p a {
+      color: #ea4c62;
+    }
 
-  .footer-menu li {
-    display: inline-block;
-    margin-left: 20px;
-  }
+    .footer-menu li {
+      display: inline-block;
+      margin-left: 20px;
+    }
 
-  .footer-menu li:hover a {
-    color: #ff5e14;
-  }
+    .footer-menu li:hover a {
+      color: #ff5e14;
+    }
 
-  .footer-menu li a {
-    font-size: 14px;
-    color: #ffffff;
-  }
-  #radio{
+    .footer-menu li a {
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    #radio {
       display: flex;
       justify-content: center;
       align-items: center;
-  }
-</style>
+    }
+  </style>
+
 
  
 
@@ -1018,7 +1277,7 @@
 
 
   <!-- Internet Connection Status-->
-  <div class="internet-connection-status" id="internetStatus"></div>
+  <!-- <div class="internet-connection-status" id="internetStatus"></div> -->
 
   <!-- All JavaScript Files-->
   <script src="js/bootstrap.bundle.min.js"></script>

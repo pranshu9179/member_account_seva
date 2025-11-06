@@ -291,78 +291,283 @@
 
 
 
- <div class="head-bg-img col-lg-12 d-flex mt-5  align-items-center"
-    style="background-image: url('img/bg-img.html'); background-size: cover; background-position: right; width: 100%; height: 35vh; ">
-    <h1 class="px-5" style="font-weight: 700; color: aliceblue;">Enquire Now</h1>
+<!-- ✅ HERO / PAGE HEADER -->
+<div
+  class="head-bg-img col-lg-12 d-flex mt-5 align-items-center"
+  style="background-image: url('img/bg-img.html'); background-size: cover; background-position: right; width: 100%; ;"
+>
+  <style>
+    /* ---- Page-level Enhancements (non-destructive) ---- */
+    .login-wrapper {
+      position: relative;
+      min-height: 65vh;              /* gives room to center the form */
+      padding: 40px 0;               /* breathing room around the form */
+      background: #f7f8fb;           /* subtle light background */
+    }
 
-    <style>
-      @media (max-width: 767px) {
+    /* Soft decorative blob behind the card */
+    .background-shape {
+      position: absolute;
+      inset: -60px -30px auto auto;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      filter: blur(55px);
+      opacity: 0.25;
+      /* background: radial-gradient(circle at 30% 30%, #ffd86b, #894900); */
+      pointer-events: none;
+      z-index: 0;
+    }
 
-        /* CSS */
-        .head-bg-img {
-          height: 15vh !important;
-        }
+    /* Card containers */
+    .enquiry-left,
+    .enquiry-right {
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      z-index: 1;
+    }
 
+    /* Left visual panel (kept your background approach) */
+    .enquiry-left {
+      background-image: url('img/5112784.html');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 340px; /* ensures presence even without text */
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+    }
+
+    /* Right form panel */
+    .enquiry-right {
+      padding: 28px;
+    }
+
+    .enquiry-right h3 {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .enquiry-subtitle {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* Form fields */
+    .register-form .form-group span {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .register-form .form-control {
+      height: 48px;
+      border: 1px solid #e6e8ef;
+      border-radius: 10px;
+      box-shadow: none !important;
+      transition: all 0.2s ease;
+      background: #fff;
+    }
+
+    .register-form .form-control:focus {
+      border-color: #ffb703;
+      box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.15) !important;
+    }
+
+/* ✅ Correct icon alignment inside input */
+.register-form label i,
+.register-form label img {
+  position: absolute;
+  /* left: 8px; */
+  /* top: 15%; */
+  transform: translateY(90%);
+  opacity: 0.7;
+  pointer-events: none;  /* prevent accidental click on icon */
+}
+
+    /* Padding-left so text doesn't overlap with icons */
+    #username.form-control {
+      padding-left: 44px;
+    }
+    #mobile.form-control {
+      padding-left: 54px;
+    }
+
+    /* Submit button refinement – keeps your classes */
+    #checkBtn.btn {
+      border-radius: 10px;
+      font-weight: 700;
+      height: 48px;
+      transition: transform 0.08s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 18px rgba(255, 183, 3, 0.35);
+    }
+    #checkBtn.btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(255, 183, 3, 0.45);
+    }
+    #checkBtn.btn:active {
+      transform: translateY(0);
+    }
+
+    /* Layout tweaks for perfect centering */
+    .login-wrapper .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Make the row vertically + horizontally centered without changing your structure */
+    .login-wrapper .row.justify-content-center {
+      min-height: 100%;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991.98px) {
+      .enquiry-left {
+        min-height: 220px;
       }
-    </style>
-  </div>
-  <!-- Login Wrapper Area-->
-  <div class="login-wrapper d-flex align-items-center justify-content-center text-center">
-    <!-- Background Shape-->
-    <div class="background-shape"></div>
-    <div class="container mt-5 mt-lg-0">
-      <div class="row justify-content-center">
-        <div
-          class="p-lg-5  col-10 col-lg-6 bg-light d-flex flex-column text-start align-items-start justify-content-end"
-          style="background-image: url('img/5112784.html');  background-size: 100%; background-repeat: no-repeat; background-position: center;">
-          <h1 style="padding-top:200px;">&nbsp;</h1>
-          <!-- <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, eaque?</h5> -->
-        </div>
+      .enquiry-right {
+        padding: 22px;
+      }
+    }
 
-        <div class="col-10 col-lg-6 bg-light p-4">
-          <h3>Enquire Now </h3>
+    @media (max-width: 767px) {
+ 
+      .enquiry-left {
+        border-radius: 12px;
+      }
+      .enquiry-right {
+        border-radius: 12px;
+      }
+      /* Reduce icon shift on small screens */
+      .register-form label i,
+      .register-form label img {
+        transform: translate(12px, 38px);
+      }
+      #username.form-control {
+        padding-left: 42px;
+      }
+      #mobile.form-control {
+        padding-left: 50px;
+      }
+    }
+  </style>
+</div>
 
-          <p><b><font color="BLACK">Get consultation and estimation from our experts</font></b> For - </p>
-          <!-- Register Form-->
-          <div class="register-form mt-5 px-lg-5">
-            <form action="#" method="post">
-              <div class="form-group text-start mb-4"><span>Name</span>
-                <label for="username"><i class="fa-solid fa-user"></i></label>
-                <input required class="form-control" id="username" required name="name" type="text" value="" placeholder="Name">
-              </div>
-              <div class="form-group text-start mb-4"><span>Mobile Number</span>
-                <label for="mobile"><img
-                    src="data:image/png;base64,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"
-                    width="20px" alt=""></label>
-                <input required class="form-control px-5" required name="mobile" id="mobile" type="tel" value=""  pattern="[0-9]{10}" placeholder="Mobile Number">
-              </div>
+<!-- ✅ ENQUIRY SECTION (Centered) -->
+<div class="login-wrapper d-flex align-items-center justify-content-center text-center">
+  <!-- Background Shape (decor) -->
+  <div class="background-shape"></div>
 
-               <div class="form-group text-start mb-4">
-                   <span>Select Your City</span>
-                <input type='text' required="" name="city" required="" class="form-control"
-         
-              </div>
-                 
+  <div class="container  mt-lg-0">
+    <div class="row justify-content-center align-items-center g-4">
+      <!-- Left Visual Panel (kept your classes & inline bg) -->
+      <!-- <div
+        class=" p-lg-5 col-10 col-lg-6   text-start "
+        style="background-image: url('img/5112784.html'); background-size: 50%; background-repeat: no-repeat; background-position: center;"
+      > -->
+        <!-- Spacer to preserve your vertical space intent -->
+        <!-- <h1 style="padding-top: 200px;">&nbsp;</h1> -->
+        <!-- <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, eaque?</h5> -->
+      <!-- </div> -->
 
+      <!-- Right Form Panel -->
+      <div class="enquiry-right col-10 col-lg-6 bg-light p-4">
+        <h3>Enquire Now</h3>
+        <p class="enquiry-subtitle">
+          <b><font color="BLACK">Get consultation and estimation from our experts</font></b> For -
+        </p>
 
-              
-               <div class="form-group text-start mb-4"><span>Remark</span>
-              
-                <input maxlegth="100" required class="form-control" id="username" name="remark" type="text" placeholder="Remark">
-              </div>
-              <input type="submit" name="submit" class="btn btn-warning btn-lg col-lg-6 " id="checkBtn" value="Submit">
-              <input type='hidden' name='service' value=''>
-            </form>
-          </div>
+        <!-- ✅ Register Form -->
+        <div class="register-form mt-4 mt-lg-5 px-lg-3">
+          <form action="#" method="post" novalidate>
+            <!-- Name -->
+            <div class="form-group text-start mb-4 position-relative">
+              <span>Name</span>
+              <label for="username"><i class="fa-solid fa-user"></i></label>
+              <input
+                required
+                class="form-control"
+                id="username"
+                name="name"
+                type="text"
+                value=""
+                placeholder="Name"
+                aria-label="Name"
+              />
+            </div>
 
+            <!-- Mobile -->
+            <div class="form-group text-start mb-4 position-relative">
+              <span>Mobile Number</span>
+              <label for="mobile"><i class="fa-solid fa-mobile"></i>
+                          </label>
+              <input
+                required
+                class="form-control px-5"
+                name="mobile"
+                id="mobile"
+                type="tel"
+                value=""
+                pattern="[0-9]{10}"
+                placeholder="Mobile Number"
+                aria-label="Mobile Number"
+              />
+            </div>
+
+            <!-- City -->
+            <div class="form-group text-start mb-4">
+              <span>Select Your City</span>
+              <label><i class="fa-solid fa-location"></i></label>
+              <input
+                type="text"
+                required
+                name="city"
+                class="form-control"
+                placeholder="Your City"
+                aria-label="City"
+              />
+            </div>
+
+            <!-- Remark -->
+            <div class="form-group text-start mb-4">
+              <span>Remark</span>
+              <label><i class="fa-solid fa-recycle"></i></label>
+              <input
+                maxlength="100"
+                required
+                class="form-control"
+                id="remark"
+                name="remark"
+                type="text"
+                placeholder="Remark"
+                aria-label="Remark"
+              />
+            </div>
+
+            <!-- Buttons -->
+            <input
+              type="submit"
+              name="submit"
+              class="btn btn-warning btn-lg col-lg-6"
+              id="checkBtn"
+              value="Submit"
+            />
+            <input type="hidden" name="service" value="" />
+          </form>
         </div>
       </div>
     </div>
-  </div>    </div>
   </div>
+</div>
 
   <!-- Internet Connection Status-->
-  <div class="internet-connection-status" id="internetStatus"></div>
+  <!-- <div class="internet-connection-status" id="internetStatus"></div> -->
   <!-- Footer Nav-->
   <br>  <br>  <br>
 
@@ -381,7 +586,7 @@
 </script>
 
 
-
+<!-- 
 <a href="enquire-2.html"><button class="enquire">Enquire Now</button></a>
 <style>
   .enquire {
@@ -404,13 +609,13 @@
     font-size: 1.1rem;
     cursor: pointer;
   }
-</style>
+</style> -->
 
 
 
 <link rel="stylesheet" href="maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.html">
 <a href="https://api.whatsapp.com/send?phone=+917582060708&amp;text=Hi%20Nestofix,%20i%20need%20a%20service%20at%20home,%20Please%20call%20Back." class="float1" target="_blank">
-<i class="fa fa-whatsapp my-float1"></i>
+  <i class="fa-brands fa-whatsapp"></i>
 </a>
 <style>
     .float1{
@@ -492,7 +697,7 @@
   }
 
   .footer-logo a {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 10px;
     padding: 20px;
   }
@@ -651,235 +856,456 @@
 
 
 
-<footer class="footer-section laptop-view-footer">
-  <div class="container">
-    <div class="footer-content pt-5 pb-1">
-      
-
-  <div class="copyright-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-3 col-lg-3 text-center text-lg-left">
-          <div class="copyright-text">
-            <!--<p align="left">	&#169;2021-2023   Pritan Solution Private Limited</p>-->
-          </div>
-        </div>
-        <div class="col-xl-9 col-lg-9 d-none d-lg-block text-left">
-          <div class="footer-menu">
-            <ul>
-              <li><a href="index-3.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-         
-               <!--<li><a href="career.php">Career</a></li>-->
-               <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-          </div>
-        </div>
-
+  <!-- 🌐 FOOTER SECTION -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo & Intro -->
+      <div class="footer-logo">
+        <a href="home.html">
+          <img src="./img//new/Account-Seva-main-logo.png" width="35%">
+        </a>
+        <p>Your trusted partner for financial and business solutions. We deliver excellence, innovation, and value to
+          our clients.</p>
       </div>
-       <hr>
-    </div>
-   
-  </div>
-</footer>
 
-<style>
-  . @media(max-width: 767px) {
-    footer {
-      display: none;
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><i class="fa-solid fa-circle-info"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-user-plus"></i> <a href="reg.html">Register with Us</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="contact.html">Contact Us</a></li>
+          <li><i class="fa-solid fa-bullhorn"></i> <a href="#">Follow Us</a></li>
+          <li><i class="fa-solid fa-toggle-on"></i> <a href="#">Associates Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="footer-social">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>© 2025 All Tax. All Rights Reserved | Developed by <strong>@ Codepact</strong></p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    .footer {
+      border-top: 2px solid #777676;
+      background-color: #c2cffb;
+      color: #000000;
+      padding: 60px 20px 20px;
+      font-family: "Poppins", sans-serif;
     }
 
-  }
+    @keyframes moveGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
 
-  .footer-section {
-    background: #1a1919;
-    position: relative;
-  }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
 
-  .footer-cta {
-    border-bottom: 1px solid #373636;
-  }
+    .footer-logo {
+      flex: 1 1 300px;
+    }
 
-  .single-cta i {
-    color: #ea4c62;
-    font-size: 30px;
-    float: left;
-    margin-top: 8px;
-  }
+    .footer-logo img {
+      width: 160px;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo p {
+      font-size: 0.95rem;
+      color: #000000;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      flex: 1 1 200px;
+    }
+
+    .footer-links h5,
+    .footer-social h5 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .footer-links h5::after,
+    .footer-social h5::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 3px;
+      background: #bd00e7;
+      left: 0;
+      bottom: -5px;
+      border-radius: 2px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links ul li {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .footer-links ul li i {
+      color: #000000;
+      font-size: 1rem;
+    }
+
+    .footer-links ul li a {
+      color: #000000;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links ul li a:hover {
+      color: #9e0066;
+    }
+
+    .footer-social {
+      flex: 1 1 200px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #000000;
+      font-size: 1.2rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #ffffff;
+      color: #9e0066;
+      border-color: #b700ff;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #777676;
+    }
+
+    .footer-bottom p {
+      font-size: 0.9rem;
+      color: #000000;
+    }
+
+    .footer-bottom strong {
+      color: #f905bc;
+    }
+
+
+    /* 🌐 Responsive */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-links ul li {
+        justify-content: center;
+      }
+
+      .footer-links h5::after,
+      .footer-social h5::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .footer-logo img {
+        margin: auto;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+  
+  <style>
+    .float1 {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 60px;
+      right: 15px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 450;
+    }
+
+    .footer-widget ul li {
+      width: 33% !important;
+    }
+
+    .my-float1 {
+      margin-top: 16px;
+    }
+
+    @media (max-width: 767px) {
+      .laptop-view-footer {
+        display: none;
+      }
+
+    }
+  </style>
+
+  <style>
+    @media(max-width: 767px) {
+      footer {
+        display: none;
+      }
+
+    }
+
+
+    .footer-section {
+      background: #1a1919;
+      position: relative;
+    }
+
+    .footer-cta {
+      border-bottom: 1px solid #373636;
+    }
+
+    .single-cta i {
+      color: #ea4c62;
+      font-size: 30px;
+      float: left;
+      margin-top: 8px;
+    }
 
 
 
-  .footer-content {
-    position: relative;
-    z-index: 2;
-  }
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
 
-  .footer-pattern img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 330px;
-    background-size: cover;
-    background-position: 100% 100%;
-  }
+    .footer-pattern img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 330px;
+      background-size: cover;
+      background-position: 100% 100%;
+    }
 
-  .footer-logo {
-    margin-bottom: 30px;
-  }
+    .footer-logo {
+      margin-bottom: 30px;
+    }
 
-  .footer-logo a {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-  }
+    .footer-logo a {
+      /* background-color: #ffffff; */
+      border-radius: 10px;
+      padding: 20px;
+    }
 
-  .footer-logo img {
-    /* padding: 20px; */
-    max-width: 200px;
-  }
+    .footer-logo img {
+      /* padding: 20px; */
+      max-width: 200px;
+    }
 
-  .footer-text p {
-    margin-bottom: 14px;
-    font-size: 14px;
-    color: #ffffff;
-    line-height: 28px;
-  }
+    .footer-text p {
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 28px;
+    }
 
-  .footer-social-icon span {
-    color: #fff;
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
-  }
+    .footer-social-icon span {
+      color: #fff;
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 20px;
+    }
 
-  .footer-social-icon a {
-    color: #fff;
-    font-size: 16px;
-    margin-right: 15px;
-  }
+    .footer-social-icon a {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 15px;
+    }
 
-  .footer-social-icon i {
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    line-height: 38px;
-    border-radius: 50%;
-  }
+    .footer-social-icon i {
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 38px;
+      border-radius: 50%;
+    }
 
-  .facebook-bg {
-    background: #3B5998;
-  }
+    .facebook-bg {
+      background: #3B5998;
+    }
 
-  .twitter-bg {
-    background: #55ACEE;
-  }
+    .twitter-bg {
+      background: #55ACEE;
+    }
 
-  .google-bg {
-    background: #DD4B39;
-  }
+    .google-bg {
+      background: #DD4B39;
+    }
 
-  .footer-widget-heading h3 {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 40px;
-    position: relative;
-  }
+    .footer-widget-heading h3 {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      position: relative;
+    }
 
-  .footer-widget-heading h3::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -15px;
-    height: 2px;
-    width: 50px;
-    background: #ea4c62;
-  }
+    .footer-widget-heading h3::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      height: 2px;
+      width: 50px;
+      background: #ea4c62;
+    }
 
-  .footer-widget ul li {
-    display: inline-block;
-    float: left;
-    width: 50%;
-    margin-bottom: 12px;
-  }
+    .footer-widget ul li {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      margin-bottom: 12px;
+    }
 
-  .footer-widget ul li a:hover {
-    color: #ea4c62;
-  }
+    .footer-widget ul li a:hover {
+      color: #ea4c62;
+    }
 
-  .footer-widget ul li a {
-    color: #ffffff;
-    text-transform: capitalize;
-  }
+    .footer-widget ul li a {
+      color: #ffffff;
+      text-transform: capitalize;
+    }
 
-  .subscribe-form {
-    position: relative;
-    overflow: hidden;
-  }
+    .subscribe-form {
+      position: relative;
+      overflow: hidden;
+    }
 
-  .subscribe-form input {
-    width: 100%;
-    padding: 14px 28px;
-    background: #7272722e;
-    border: 1px solid #2E2E2E;
-    color: #fff;
-  }
+    .subscribe-form input {
+      width: 100%;
+      padding: 14px 28px;
+      background: #7272722e;
+      border: 1px solid #2E2E2E;
+      color: #fff;
+    }
 
-  .subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: #ea4c62;
-    padding: 13px 20px;
-    border: 1px solid #ea4c62;
-    top: 0;
-  }
+    .subscribe-form button {
+      position: absolute;
+      right: 0;
+      background: #ea4c62;
+      padding: 13px 20px;
+      border: 1px solid #ea4c62;
+      top: 0;
+    }
 
-  .subscribe-form button i {
-    color: #fff;
-    font-size: 22px;
-    transform: rotate(-6deg);
-  }
+    .subscribe-form button i {
+      color: #fff;
+      font-size: 22px;
+      transform: rotate(-6deg);
+    }
 
-  .copyright-area {
-    background: #1a1919;
-    padding: 25px 0;
-  }
+    .copyright-area {
+      background: #1a1919;
+      padding: 25px 0;
+    }
 
-  .copyright-text p {
-    margin: 0;
-    font-size: 14px;
-    color: #ffffff;
-  }
+    .copyright-text p {
+      margin: 0;
+      font-size: 14px;
+      color: #ffffff;
+    }
 
-  .copyright-text p a {
-    color: #ea4c62;
-  }
+    .copyright-text p a {
+      color: #ea4c62;
+    }
 
-  .footer-menu li {
-    display: inline-block;
-    margin-left: 20px;
-  }
+    .footer-menu li {
+      display: inline-block;
+      margin-left: 20px;
+    }
 
-  .footer-menu li:hover a {
-    color: #ff5e14;
-  }
+    .footer-menu li:hover a {
+      color: #ff5e14;
+    }
 
-  .footer-menu li a {
-    font-size: 14px;
-    color: #ffffff;
-  }
-  #radio{
+    .footer-menu li a {
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    #radio {
       display: flex;
       justify-content: center;
       align-items: center;
-  }
-</style>
+    }
+  </style>
 
- 
 
 
   <!-- Internet Connection Status-->
@@ -949,7 +1375,7 @@
   }
 
   .footer-logo a {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 10px;
     padding: 20px;
   }
