@@ -1425,15 +1425,16 @@ textarea:invalid {
   width: 100%;
   left: 0;
   bottom: 0;
-  -webkit-box-shadow: 0 0 8px rgba(15, 15, 15, 0.15);
-  box-shadow: 0 0 8px rgba(15, 15, 15, 0.15);
-  background-color: #ea4c62;
+  -webkit-box-shadow: 0 0 14px rgba(15, 15, 15, 0.15);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  background-color: #e9eeff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  opacity: 0.7;
 }
 
 .suha-footer-nav {
@@ -1492,7 +1493,7 @@ textarea:invalid {
   text-align: center;
   text-transform: capitalize;
   line-height: 1;
-  color: #ffffff;
+  color: #252525;
   z-index: 1;
 }
 
@@ -1504,7 +1505,7 @@ textarea:invalid {
 
 .suha-footer-nav ul li a:hover,
 .suha-footer-nav ul li a:focus {
-  color: #ffffff;
+  color:#000000;
 }
 
 .suha-footer-nav ul li a img {
