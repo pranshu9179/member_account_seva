@@ -1427,14 +1427,14 @@ textarea:invalid {
   bottom: 0;
   -webkit-box-shadow: 0 0 14px rgba(15, 15, 15, 0.15);
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-  background-color: #e9eeff;
+  background-color: #dfe6ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .suha-footer-nav {
@@ -1493,7 +1493,7 @@ textarea:invalid {
   text-align: center;
   text-transform: capitalize;
   line-height: 1;
-  color: #252525;
+  color: #131212;
   z-index: 1;
 }
 
